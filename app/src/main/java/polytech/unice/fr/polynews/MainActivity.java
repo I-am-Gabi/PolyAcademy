@@ -14,14 +14,16 @@ import android.view.MenuItem;
 import polytech.unice.fr.polynews.fragment.EventsFragment;
 import polytech.unice.fr.polynews.fragment.HomeFragment;
 
-
+/**
+ * @see <a href="https://github.com/smuldr/design-support-demo">Android Design Support Library Demo</a>
+ * @see <a href="https://github.com/codepath/android_guides/wiki/Fragment-Navigation-Drawer">Fragment Navigation Drawer</a>
+ */
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private static final String NAV_ITEM_ID = "navItemId";
     private static final long DRAWER_CLOSE_DELAY_MS = 350;
     private DrawerLayout drawer;
-    private NavigationView navigationView;
     private ActionBarDrawerToggle toggle;
     private int nav_item_id;
 
@@ -44,8 +46,9 @@ public class MainActivity extends AppCompatActivity
             nav_item_id = savedInstanceState.getInt(NAV_ITEM_ID);
 
         // initializing Navigation view in activity class
-        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         // listen for navigation events
+        assert navigationView != null;
         navigationView.setNavigationItemSelectedListener(this);
 
         // select the correct nav menu item
@@ -92,10 +95,6 @@ public class MainActivity extends AppCompatActivity
         }
 
         return super.onOptionsItemSelected(item);
-        /*if (item.getItemId() == android.support.v7.appcompat.R.id.home) {
-            return toggle.onOptionsItemSelected(item);
-        }
-        return super.onOptionsItemSelected(item);*/
     }
 
     @Override
@@ -113,6 +112,10 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    /**
+     * Called by the system when the device configuration changes while your activity is running.
+     * @param newConfiguration The new device configuration.
+     */
     @Override
     public void onConfigurationChanged(final Configuration newConfiguration) {
         super.onConfigurationChanged(newConfiguration);
