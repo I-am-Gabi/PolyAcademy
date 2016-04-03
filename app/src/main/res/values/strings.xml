@@ -13,4 +13,5 @@
 
     <string name="hello_events">Events PolyAcademy</string>
     <string name="hello_home">Home PolyAcademy</string>
+    <string name="database_events_path">/data/data/polytech.unice.fr.polynews/databases/</string>
 </resources>

@@ -1,5 +1,6 @@
 package polytech.unice.fr.polynews;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -135,11 +136,13 @@ public class MainActivity extends AppCompatActivity
     public void navigationHandler(int menuItemId) {
         switch (menuItemId) {
             case R.id.nav_events:
-                getFragmentManager()
+                Intent intent = new Intent(this, CardViewActivity.class);
+                this.startActivity(intent);
+                break;
+                /*getFragmentManager()
                         .beginTransaction()
                         .replace(R.id.content, EventsFragment.newInstance())
-                        .commit();
-                break;
+                        .commit();*/
             case R.id.nav_home:
                 getFragmentManager()
                         .beginTransaction()
