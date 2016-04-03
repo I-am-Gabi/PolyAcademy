@@ -6,14 +6,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import java.io.IOException;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-
 import polytech.unice.fr.polynews.adapter.RecyclerViewAdapter;
-import polytech.unice.fr.polynews.database.NewsDBHelper;
-import polytech.unice.fr.polynews.model.Event;
 
 public class CardViewActivity extends AppCompatActivity {
     RecyclerView recyclerView;

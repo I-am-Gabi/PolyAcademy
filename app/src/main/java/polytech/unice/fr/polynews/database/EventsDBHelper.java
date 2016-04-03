@@ -29,7 +29,7 @@ import polytech.unice.fr.polynews.model.Event;
  *     Android SQLite Database Tutorial
  *     </a>
  */
-public class NewsDBHelper extends SQLiteOpenHelper {
+public class EventsDBHelper extends SQLiteOpenHelper {
     public static final String TAG = "MyActivity";
     // Database Version
     private static final int DATABASE_VERSION = 1;
@@ -43,7 +43,7 @@ public class NewsDBHelper extends SQLiteOpenHelper {
     private SQLiteDatabase myDataBase;
     private final Context myContext;
 
-    public NewsDBHelper(Context context) {
+    public EventsDBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         this.myContext = context;
     }

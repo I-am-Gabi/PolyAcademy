@@ -12,7 +12,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import polytech.unice.fr.polynews.fragment.EventsFragment;
 import polytech.unice.fr.polynews.fragment.HomeFragment;
 
 /**
@@ -139,10 +138,6 @@ public class MainActivity extends AppCompatActivity
                 Intent intent = new Intent(this, CardViewActivity.class);
                 this.startActivity(intent);
                 break;
-                /*getFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.content, EventsFragment.newInstance())
-                        .commit();*/
             case R.id.nav_home:
                 getFragmentManager()
                         .beginTransaction()

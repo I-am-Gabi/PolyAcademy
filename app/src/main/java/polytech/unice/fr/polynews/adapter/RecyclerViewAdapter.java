@@ -1,7 +1,6 @@
 package polytech.unice.fr.polynews.adapter;
 
 import android.content.Context;
-import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +12,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 import polytech.unice.fr.polynews.R;
-import polytech.unice.fr.polynews.database.NewsDBHelper;
+import polytech.unice.fr.polynews.database.EventsDBHelper;
 import polytech.unice.fr.polynews.model.Event;
 
 /**
@@ -63,7 +62,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     public List<Event> setmDataset() {
-        NewsDBHelper dbHelper = new NewsDBHelper(context);
+        EventsDBHelper dbHelper = new EventsDBHelper(context);
         try {
             dbHelper.createDataBase();
             dbHelper.openDataBase();
