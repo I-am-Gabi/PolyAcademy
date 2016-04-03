@@ -70,7 +70,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             e.printStackTrace();
         }
 
-        List<Event> newsList = dbHelper.selectRecords();
-        return newsList;
+        return dbHelper.selectRecords();
     }
 }
