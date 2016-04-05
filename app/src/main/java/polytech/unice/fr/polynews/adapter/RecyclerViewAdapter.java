@@ -19,8 +19,9 @@ import polytech.unice.fr.polynews.model.Event;
  * @version 03/04/16.
  */
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
-    private List<Event> mDataset;
+    private List<Event> dataSet;
     private Context context;
+
     // Provide a reference to the views for each data item
     public static class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
@@ -36,7 +37,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     // Provide a suitable constructor (depends on the kind of dataset)
     public RecyclerViewAdapter(Context context) {
         this.context = context;
-        this.mDataset = setmDataset();
+        this.dataSet = setDataSet();
     }
 
     @Override
@@ -51,17 +52,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(ViewHolder holder, int position) {
         // - get element from dataset at this position
         // - replace the contents of the view with that element
-        holder.title.setText(mDataset.get(position).getTitle());
-        holder.description.setText(mDataset.get(position).getDescription());
+        holder.title.setText(dataSet.get(position).getTitle());
+        holder.description.setText(dataSet.get(position).getDescription());
     }
 
     // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
-        return mDataset.size();
+        return dataSet.size();
     }
 
-    public List<Event> setmDataset() {
+    private List<Event> setDataSet() {
         EventsDBHelper dbHelper = new EventsDBHelper(context);
         try {
             dbHelper.createDataBase();
