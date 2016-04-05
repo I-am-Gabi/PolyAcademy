@@ -14,52 +14,21 @@ import android.view.MenuItem;
 
 import polytech.unice.fr.polynews.fragment.HomeFragment;
 
-/**
- * @see <a href="https://github.com/smuldr/design-support-demo">Android Design Support Library Demo</a>
- * @see <a href="https://github.com/codepath/android_guides/wiki/Fragment-Navigation-Drawer">Fragment Navigation Drawer</a>
- */
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
 
-    private static final String NAV_ITEM_ID = "navItemId";
-    private static final long DRAWER_CLOSE_DELAY_MS = 350;
-    private DrawerLayout drawer;
-    private ActionBarDrawerToggle toggle;
-    private int nav_item_id;
+/**
+ * @version 04/04/16.
+ */
+public abstract class BaseActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener{
+    protected static final String NAV_ITEM_ID = "navItemId";
+    protected static final long DRAWER_CLOSE_DELAY_MS = 350;
+    protected DrawerLayout drawer;
+    protected ActionBarDrawerToggle toggle;
+    protected int nav_item_id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        // set up the menu icon to open and close the drawer
-        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-
-        // initializing the toolbar and setting it as actionbar
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        // load saved navigation state if exists
-        if (null == savedInstanceState)
-            nav_item_id = R.id.nav_home;
-        else
-            nav_item_id = savedInstanceState.getInt(NAV_ITEM_ID);
-
-        // initializing Navigation view in activity class
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        // listen for navigation events
-        assert navigationView != null;
-        navigationView.setNavigationItemSelectedListener(this);
-
-        // select the correct nav menu item
-        navigationView.getMenu().findItem(nav_item_id).setChecked(true);
-
-        toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();
-
-        navigationHandler(nav_item_id);
     }
 
     @Override
