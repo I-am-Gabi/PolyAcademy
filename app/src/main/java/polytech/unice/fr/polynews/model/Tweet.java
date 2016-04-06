@@ -4,22 +4,27 @@ package polytech.unice.fr.polynews.model;
  * @version 06/04/16.
  */
 public class Tweet {
-    private String author;
-    private String content;
+    String tweetBy;
+    String tweet;
 
-    public String getAuthor() {
-        return author;
+    public Tweet(String tweetBy, String tweet) {
+        this.tweetBy = tweetBy;
+        this.tweet = tweet;
     }
 
-    public String getContent() {
-        return content;
+    public String getTweetBy() {
+        return tweetBy;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setTweetBy(String tweetBy) {
+        this.tweetBy = tweetBy;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public String getTweet() {
+        return tweet;
+    }
+
+    public void setTweet(String tweet) {
+        this.tweet = tweet;
     }
 }

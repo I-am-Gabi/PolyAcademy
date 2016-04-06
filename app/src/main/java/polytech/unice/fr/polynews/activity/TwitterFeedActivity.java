@@ -4,78 +4,102 @@ import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpStatus;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.util.EntityUtils;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import polytech.unice.fr.polynews.R;
-import polytech.unice.fr.polynews.adapter.TweetListAdaptor;
+import polytech.unice.fr.polynews.adapter.TweetAdapter;
 import polytech.unice.fr.polynews.model.Tweet;
+import twitter4j.Query;
+import twitter4j.QueryResult;
+import twitter4j.Twitter;
+import twitter4j.TwitterFactory;
+import twitter4j.auth.OAuth2Token;
+import twitter4j.conf.ConfigurationBuilder;
 
 /**
  * @version 06/04/16.
  */
 public class TwitterFeedActivity extends ListActivity {
-    private ArrayList<Tweet> tweets = new ArrayList<Tweet>();
+    private static final String TWIT_CONS_KEY = "KXD76JSTl2g5SoRjWBO0zTcCW";
+    private static final String TWIT_CONS_SEC_KEY = "yhqjfad0Jj9KZtpaXglsLLRiD4A4Va6VTkNgTFcHYbnovQ8csT";
+    protected ListView list;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_twitter);
+        list = (ListView) findViewById(android.R.id.list);
 
-        new TwitterFeedTask().execute();
+        new TwitterFeedTask().execute("_gabiCavalcante");
     }
 
-    private class TwitterFeedTask extends AsyncTask<Void, Void, Void> {
+    private class TwitterFeedTask extends AsyncTask<String, Void, Integer> {
         private ProgressDialog progressDialog;
+        private ArrayList<Tweet> tweets = new ArrayList<Tweet>();
+        final int SUCCESS = 0;
+        final int FAILURE = SUCCESS + 1;
 
         protected void onPreExecute() {
+            super.onPreExecute();
             progressDialog = ProgressDialog.show(TwitterFeedActivity.this,
                     "", "Loading. Please wait...", true);
         }
 
         @Override
-        protected Void doInBackground(Void... params) {
+        protected Integer doInBackground(String... params) {
             try {
-                HttpClient hc = new DefaultHttpClient();
-                HttpGet get = new
-                        HttpGet("http://search.twitter.com/search.json?q=android");
-                HttpResponse rp = hc.execute(get);
+                ConfigurationBuilder builder = new ConfigurationBuilder();
+                // builder.setUseSSL(true);
+                builder.setApplicationOnlyAuthEnabled(true);
+                builder.setOAuthConsumerKey(TWIT_CONS_KEY);
+                builder.setOAuthConsumerSecret(TWIT_CONS_SEC_KEY);
 
-                if(rp.getStatusLine().getStatusCode() == HttpStatus.SC_OK)
-                {
-                    String result = EntityUtils.toString(rp.getEntity());
-                    JSONObject root = new JSONObject(result);
-                    JSONArray sessions = root.getJSONArray("results");
-                    for (int i = 0; i < sessions.length(); i++) {
-                        JSONObject session = sessions.getJSONObject(i);
+                OAuth2Token token = new TwitterFactory(builder.build()).getInstance().getOAuth2Token();
 
-                        Tweet tweet = new Tweet();
-                        tweet.setContent(session.getString("text"));
-                        tweet.setAuthor(session.getString("from_user"));
-                        tweets.add(tweet);
+                builder = new ConfigurationBuilder();
+                builder.setApplicationOnlyAuthEnabled(true);
+                builder.setOAuthConsumerKey(TWIT_CONS_KEY);
+                builder.setOAuthConsumerSecret(TWIT_CONS_SEC_KEY);
+                builder.setOAuth2TokenType(token.getTokenType());
+                builder.setOAuth2AccessToken(token.getAccessToken());
+
+                Twitter twitter = new TwitterFactory(builder.build()).getInstance();
+
+                Query query = new Query(params[0]);
+                // You can set the count of maximum records here
+                query.setCount(5);
+                QueryResult result;
+                result = twitter.search(query);
+                List<twitter4j.Status> tweets = result.getTweets();
+                StringBuilder str = new StringBuilder();
+                if (tweets != null) {
+                    this.tweets = new ArrayList<>();
+                    for (twitter4j.Status tweet : tweets) {
+                        str.append("@" + tweet.getUser().getScreenName() + " - " + tweet.getText() + "\n");
+                        this.tweets.add(new Tweet("@" + tweet.getUser().getScreenName(), tweet.getText()));
                     }
+                    return SUCCESS;
                 }
 
-            } catch (Exception e) {
-                Log.e("TwitterFeedActivity", "Error loading JSON", e);
+            } catch (Exception ex) {
+                ex.printStackTrace();
             }
-            return null;
+            return FAILURE;
         }
 
         @Override
-        protected void onPostExecute(Void result) {
+        protected void onPostExecute(Integer result) {
+            super.onPostExecute(result);
             progressDialog.dismiss();
-            TweetListAdaptor adaptor = new TweetListAdaptor(TwitterFeedActivity.this, R.layout.list_item_tweet, tweets);
-            setListAdapter(adaptor);
+            if (result == SUCCESS) {
+                list.setAdapter(new TweetAdapter(TwitterFeedActivity.this, tweets));
+            } else {
+                Toast.makeText(TwitterFeedActivity.this, "Error twitter", Toast.LENGTH_LONG).show();
+            }
         }
     }
 }
