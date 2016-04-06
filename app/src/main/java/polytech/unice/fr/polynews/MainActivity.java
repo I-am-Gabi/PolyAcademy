@@ -152,8 +152,6 @@ public class MainActivity extends AppCompatActivity
                         .beginTransaction()
                         .replace(R.id.content, EventsFragment.newInstance())
                         .commit();
-                        //Intent intent = new Intent(this, CardViewActivity.class);
-                        //this.startActivity(intent);
 
                 break;
             case R.id.nav_home:
