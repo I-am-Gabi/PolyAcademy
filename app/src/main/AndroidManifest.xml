@@ -3,6 +3,7 @@
     package="polytech.unice.fr.polynews">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -23,6 +24,20 @@
         <activity
             android:name=".CardViewActivity">
         </activity>
+        <activity
+            android:name=".activity.TimelineActivity">
+        </activity>
+        <activity
+            android:name=".activity.TwitterFeedActivity">
+        </activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="59c47197f38ae92c69bc61d555e4f0ec07b50708" />
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>

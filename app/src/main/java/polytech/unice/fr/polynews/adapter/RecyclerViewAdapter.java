@@ -43,7 +43,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public RecyclerViewAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         // create a new view
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_evento_row, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_event, parent, false);
         return new ViewHolder(v);
     }
 
