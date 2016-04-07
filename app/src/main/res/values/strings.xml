@@ -16,7 +16,7 @@
     <string name="hello_home">Home PolyAcademy</string>
     <string name="database_events_path">/data/data/polytech.unice.fr.polynews/databases/</string>
     <string name="searching">searching tweets</string>
-    <string name="user_twitter">polytechnice</string>
+    <string name="user_twitter">_gabiCavalcante</string>
     <string name="error_twitter">Error twitter</string>
     <string name="title_activity_twitter_feed">TwitterFeedActivity</string>
 </resources>
