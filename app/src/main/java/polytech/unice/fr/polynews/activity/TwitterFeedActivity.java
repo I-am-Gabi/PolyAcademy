@@ -32,14 +32,15 @@ public class TwitterFeedActivity extends ListActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_twitter);
+
         list = (ListView) findViewById(android.R.id.list);
 
-        new TwitterFeedTask().execute("_gabiCavalcante");
+        new TwitterFeedTask().execute(getString(R.string.user_twitter));
     }
 
     private class TwitterFeedTask extends AsyncTask<String, Void, Integer> {
         private ProgressDialog progressDialog;
-        private ArrayList<Tweet> tweets = new ArrayList<Tweet>();
+        private ArrayList<Tweet> tweets = new ArrayList<>();
         final int SUCCESS = 0;
         final int FAILURE = SUCCESS + 1;
 
@@ -53,7 +54,6 @@ public class TwitterFeedActivity extends ListActivity {
         protected Integer doInBackground(String... params) {
             try {
                 ConfigurationBuilder builder = new ConfigurationBuilder();
-                // builder.setUseSSL(true);
                 builder.setApplicationOnlyAuthEnabled(true);
                 builder.setOAuthConsumerKey(TWIT_CONS_KEY);
                 builder.setOAuthConsumerSecret(TWIT_CONS_SEC_KEY);
@@ -97,8 +97,9 @@ public class TwitterFeedActivity extends ListActivity {
             progressDialog.dismiss();
             if (result == SUCCESS) {
                 list.setAdapter(new TweetAdapter(TwitterFeedActivity.this, tweets));
+                //Toast.makeText(TwitterFeedActivity.this, tweets.get(0).getTweet(), Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(TwitterFeedActivity.this, "Error twitter", Toast.LENGTH_LONG).show();
+                Toast.makeText(TwitterFeedActivity.this, R.string.error_twitter, Toast.LENGTH_LONG).show();
             }
         }
     }

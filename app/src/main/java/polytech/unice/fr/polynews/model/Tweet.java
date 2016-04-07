@@ -16,15 +16,7 @@ public class Tweet {
         return tweetBy;
     }
 
-    public void setTweetBy(String tweetBy) {
-        this.tweetBy = tweetBy;
-    }
-
     public String getTweet() {
         return tweet;
-    }
-
-    public void setTweet(String tweet) {
-        this.tweet = tweet;
     }
 }

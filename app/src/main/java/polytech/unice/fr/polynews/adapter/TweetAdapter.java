@@ -8,51 +8,49 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import polytech.unice.fr.polynews.R;
 import polytech.unice.fr.polynews.model.Tweet;
 
-public class TweetAdapter extends BaseAdapter {
-    ArrayList<Tweet> tweetList;
-    Context context;
+public class TweetAdapter extends ArrayAdapter<Tweet> {
+    private List<Tweet> tweetList;
+    private Context context;
 
-    public TweetAdapter(Context context, ArrayList<Tweet> tweetList) {
+    public static class ViewHolder {
+        public TextView txtTweet;
+        public TextView txtTweetBy;
+    }
+
+    public TweetAdapter(Context context, List<Tweet> tweetList) {
+        super(context, -1, tweetList);
         this.tweetList = tweetList;
         this.context = context;
     }
 
     @Override
-    public int getCount() {
-        return tweetList.size();
-    }
-
-    @Override
-    public Object getItem(int position) {
-        return null;
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return 0;
-    }
-
-    @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        ViewHolder holder;
+
         if (convertView == null) {
             LayoutInflater inflater = LayoutInflater.from(context);
             convertView = inflater.inflate(R.layout.list_item_tweet, null);
+            holder = new ViewHolder();
+            holder.txtTweet = (TextView) convertView.findViewById(R.id.txtTweet);
+            holder.txtTweetBy = (TextView) convertView.findViewById(R.id.txtTweetBy);
+            convertView.setTag(holder);
+        } else {
+            holder = (ViewHolder) convertView.getTag();
         }
 
-        Tweet tweet = tweetList.get(position);
-        TextView txtTweet = (TextView) convertView.findViewById(R.id.txtTweet);
-        TextView txtTweetBy = (TextView) convertView.findViewById(R.id.txtTweetBy);
 
-        txtTweet.setText(tweet.getTweet());
-        txtTweetBy.setText(tweet.getTweetBy());
+        Tweet tweet = tweetList.get(position);
+
+        holder.txtTweet.setText(tweet.getTweet());
+        holder.txtTweetBy.setText(tweet.getTweetBy());
 
         return convertView;
     }
