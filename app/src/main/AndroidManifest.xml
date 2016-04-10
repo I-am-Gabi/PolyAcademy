@@ -20,6 +20,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+        android:name=".ButtonActivity">
+        </activity>
+        <uses-permission android:name="android.permission.INTERNET"/>
         <activity
             android:name=".CardViewActivity">
         </activity>

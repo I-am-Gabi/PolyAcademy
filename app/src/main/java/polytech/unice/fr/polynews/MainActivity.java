@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import polytech.unice.fr.polynews.fragment.CampusHomeFragment;
 import polytech.unice.fr.polynews.fragment.EventsFragment;
 import polytech.unice.fr.polynews.fragment.HomeFragment;
 
@@ -93,6 +94,8 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_events:
                 drawer.openDrawer(GravityCompat.START);
                 return true;
+            case R.id.nav_campus:
+                drawer.openDrawer(GravityCompat.START);
         }
 
         return super.onOptionsItemSelected(item);
@@ -149,6 +152,12 @@ public class MainActivity extends AppCompatActivity
                 getFragmentManager()
                         .beginTransaction()
                         .replace(R.id.content, HomeFragment.newInstance())
+                        .commit();
+                break;
+            case R.id.nav_campus:
+                getFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.content, CampusHomeFragment.newInstance())
                         .commit();
                 break;
             default:
