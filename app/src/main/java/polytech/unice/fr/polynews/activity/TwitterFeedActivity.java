@@ -79,8 +79,8 @@ public class TwitterFeedActivity extends ListActivity {
                 if (tweets != null) {
                     this.tweets = new ArrayList<>();
                     for (twitter4j.Status tweet : tweets) {
-                        str.append("@" + tweet.getUser().getScreenName() + " - " + tweet.getText() + "\n");
-                        this.tweets.add(new Tweet("@" + tweet.getUser().getScreenName(), tweet.getText()));
+                        // str.append("@" + tweet.getUser().getScreenName() + " - " + tweet.getText() + "\n");
+                        this.tweets.add(new Tweet("@" + tweet.getUser().getScreenName(), tweet.getText(), tweet.getUser().getBiggerProfileImageURL()));
                     }
                     return SUCCESS;
                 }
@@ -97,7 +97,6 @@ public class TwitterFeedActivity extends ListActivity {
             progressDialog.dismiss();
             if (result == SUCCESS) {
                 list.setAdapter(new TweetAdapter(TwitterFeedActivity.this, tweets));
-                //Toast.makeText(TwitterFeedActivity.this, tweets.get(0).getTweet(), Toast.LENGTH_LONG).show();
             } else {
                 Toast.makeText(TwitterFeedActivity.this, R.string.error_twitter, Toast.LENGTH_LONG).show();
             }

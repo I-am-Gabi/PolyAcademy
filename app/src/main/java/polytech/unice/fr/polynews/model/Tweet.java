@@ -6,10 +6,12 @@ package polytech.unice.fr.polynews.model;
 public class Tweet {
     String tweetBy;
     String tweet;
+    String picture_profile;
 
-    public Tweet(String tweetBy, String tweet) {
+    public Tweet(String tweetBy, String tweet, String picture_profile) {
         this.tweetBy = tweetBy;
         this.tweet = tweet;
+        this.picture_profile = picture_profile;
     }
 
     public String getTweetBy() {
@@ -18,5 +20,9 @@ public class Tweet {
 
     public String getTweet() {
         return tweet;
+    }
+
+    public String getPicture_profile() {
+        return picture_profile;
     }
 }
