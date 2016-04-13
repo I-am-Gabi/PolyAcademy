@@ -80,7 +80,7 @@ public class TwitterFeedActivity extends ListActivity {
                     this.tweets = new ArrayList<>();
                     for (twitter4j.Status tweet : tweets) {
                         // str.append("@" + tweet.getUser().getScreenName() + " - " + tweet.getText() + "\n");
-                        this.tweets.add(new Tweet("@" + tweet.getUser().getScreenName(), tweet.getText(), tweet.getUser().getBiggerProfileImageURL()));
+                        this.tweets.add(new Tweet("@" + tweet.getUser().getScreenName(), tweet.getText(), tweet.getUser().getOriginalProfileImageURL()));
                     }
                     return SUCCESS;
                 }

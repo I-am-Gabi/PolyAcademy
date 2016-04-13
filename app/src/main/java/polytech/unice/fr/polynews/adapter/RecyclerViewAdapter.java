@@ -27,10 +27,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         // each data item is just a string in this case
         public TextView title;
         public TextView description;
+        public TextView date_time;
+        public TextView local;
         public ViewHolder(View itemView) {
             super(itemView);
             this.title = (TextView) itemView.findViewById(R.id.title_event);
             this.description = (TextView) itemView.findViewById(R.id.description_event);
+            this.date_time = (TextView) itemView.findViewById(R.id.date_time);
+            this.local = (TextView) itemView.findViewById(R.id.local);
         }
     }
 
@@ -54,6 +58,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         // - replace the contents of the view with that element
         holder.title.setText(dataSet.get(position).getTitle());
         holder.description.setText(dataSet.get(position).getDescription());
+        holder.date_time.setText(dataSet.get(position).getDateTime());
+        holder.local.setText(dataSet.get(position).getLocal());
     }
 
     // Return the size of your dataset (invoked by the layout manager)
