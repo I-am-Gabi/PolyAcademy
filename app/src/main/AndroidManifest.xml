@@ -31,8 +31,8 @@
                     android:scheme="oauth" />
             </intent-filter>
         </activity>
-        <activity android:name=".CardViewActivity"></activity>
-        <activity android:name=".activity.TwitterFeedActivity"></activity>
+        <activity android:name=".CardViewActivity"/>
+        <activity android:name=".activity.TwitterFeedActivity"/>
 
         <meta-data
             android:name="io.fabric.ApiKey"

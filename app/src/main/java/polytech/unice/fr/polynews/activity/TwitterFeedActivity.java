@@ -2,8 +2,12 @@ package polytech.unice.fr.polynews.activity;
 
 import android.app.ListActivity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -33,9 +37,36 @@ public class TwitterFeedActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_twitter);
 
+        Button btn_share = (Button)findViewById(R.id.shareit);
+        assert btn_share != null;
+        btn_share.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                shareIt();
+            }
+        });
+
         list = (ListView) findViewById(android.R.id.list);
 
         new TwitterFeedTask().execute(getString(R.string.user_twitter));
+    }
+
+    private void shareIt() {
+        //sharing implementation here
+        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "PolyAcademy");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, "HEY! Now you have an APP to see all news about the Polytech! Click here to visit http://www.polytechnice.fr/ ");
+        startActivity(Intent.createChooser(sharingIntent, "Share via"));
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        return super.onOptionsItemSelected(item);
     }
 
     private class TwitterFeedTask extends AsyncTask<String, Void, Integer> {
