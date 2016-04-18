@@ -1,6 +1,5 @@
 package polytech.unice.fr.polynews;
 
-import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
