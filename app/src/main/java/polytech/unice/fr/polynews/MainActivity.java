@@ -1,5 +1,6 @@
 package polytech.unice.fr.polynews;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -11,9 +12,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.twitter.sdk.android.Twitter;
+import com.twitter.sdk.android.core.TwitterAuthConfig;
+
+import io.fabric.sdk.android.Fabric;
+import polytech.unice.fr.polynews.activity.TwitterFeedActivity;
 import polytech.unice.fr.polynews.fragment.CampusHomeFragment;
 import polytech.unice.fr.polynews.fragment.EventsFragment;
 import polytech.unice.fr.polynews.fragment.HomeFragment;
+
 
 /**
  * @see <a href="https://github.com/smuldr/design-support-demo">Android Design Support Library Demo</a>
@@ -21,6 +28,11 @@ import polytech.unice.fr.polynews.fragment.HomeFragment;
  */
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    // Note: Your consumer key and secret should be obfuscated in your source code before shipping.
+    private static final String TWITTER_KEY = "d4c5QBgKTlZQQtDo17RCv4owQ";
+    private static final String TWITTER_SECRET = "VC5kBZRmY1E9USKFv4PHngUL3ka2QjoWxQ66gHMzNtAXMd0ZB8";
+
 
     private static final String NAV_ITEM_ID = "navItemId";
     private static final long DRAWER_CLOSE_DELAY_MS = 350;
@@ -31,6 +43,8 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
+        Fabric.with(this, new Twitter(authConfig));
         setContentView(R.layout.activity_main);
 
         // set up the menu icon to open and close the drawer
@@ -142,10 +156,7 @@ public class MainActivity extends AppCompatActivity
                         .beginTransaction()
                         .replace(R.id.content, EventsFragment.newInstance())
                         .commit();
-                /*
-                    Intent intent = new Intent(this, CardViewActivity.class);
-                    this.startActivity(intent);
-                */
+
                 break;
             case R.id.nav_home:
                 getFragmentManager()
@@ -159,6 +170,9 @@ public class MainActivity extends AppCompatActivity
                         .replace(R.id.content, CampusHomeFragment.newInstance())
                         .commit();
                 break;
+            case R.id.nav_twitter:
+                Intent intent = new Intent(this, TwitterFeedActivity.class);
+                this.startActivity(intent);
             default:
                 break;
         }

@@ -56,13 +56,42 @@
                 />
 
             <TextView
+                android:id="@+id/date_time"
+                style="style/TextAppearance.Small"
+                android:paddingLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Small text"
+                android:layout_toEndOf="@+id/image"
+                android:layout_below="@+id/title_event"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:maxLength="100"
+                />
+
+
+            <TextView
+                android:id="@+id/local"
+                style="style/TextAppearance.Small"
+                android:paddingLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Small text"
+                android:layout_toEndOf="@+id/date_time"
+                android:layout_below="@+id/title_event"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:maxLength="100"
+                />
+
+            <TextView
                 android:id="@+id/description_event"
                 style="style/TextAppearance.Small"
                 android:paddingLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Large Text"
-                android:layout_below="@+id/title_event"
+                android:text="Small Text"
+                android:layout_below="@+id/date_time"
                 android:layout_toEndOf="@+id/image"
                 android:maxLength="100"/>
         </RelativeLayout>

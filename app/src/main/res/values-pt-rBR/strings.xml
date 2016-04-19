@@ -5,4 +5,8 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Configurações</string>
+
+    <string name="welcome">Bem vinda a Polytech!</string>
+    <string name="doNotShow">Não quer ver isto novamente??</string>
+    <string name="next">Próximo</string>
 </resources>

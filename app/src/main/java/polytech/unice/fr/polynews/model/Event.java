@@ -7,13 +7,13 @@ public class Event {
     private int id;
     private String title;
     private String description;
-    private String datatime;
+    private String datetime;
     private String local;
 
     public Event() {
         this.title = "title";
         this.description = "description";
-        this.datatime = "10/10/10 00:00:00";
+        this.datetime = "10/10/10 00:00:00";
         this.local = "Nice";
     }
 
@@ -41,11 +41,19 @@ public class Event {
         this.description = description;
     }
 
-    public void setDatatime(String datatime) {
-        this.datatime = datatime;
+    public void setDatetime(String datetime) {
+        this.datetime = datetime;
     }
 
     public void setLocal(String local) {
         this.local = local;
+    }
+
+    public String getDateTime() {
+        return datetime;
+    }
+
+    public String getLocal() {
+        return local;
     }
 }
