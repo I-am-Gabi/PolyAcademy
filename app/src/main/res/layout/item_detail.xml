@@ -6,4 +6,5 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:textIsSelectable="true"
+    android:fontFamily="sans-serif-condensed"
     tools:context="polytech.unice.fr.testapplication.ItemDetailFragment" />
