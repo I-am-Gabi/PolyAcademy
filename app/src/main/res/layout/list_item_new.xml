@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="center_horizontal"
+    android:padding="5dp"
+    android:layout_height="150dp">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view_event"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        card_view:cardElevation="4dp"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <!-- A photo on the left. We'll just use the launcher icon. -->
+            <ImageView
+                android:src="@drawable/icon"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:scaleType="centerCrop"
+                android:id="@+id/image" />
+
+            <TextView
+                android:id="@+id/title_new"
+                style="style/TextAppearance.Medium"
+                android:paddingLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Large Text"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/image"
+                android:fontFamily="sans-serif-condensed"
+                android:lineSpacingMultiplier="0.85"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:ellipsize="end"
+                />
+
+            <TextView
+                android:id="@+id/date_time_new"
+                style="style/TextAppearance.Small"
+                android:paddingLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Small text"
+                android:layout_toEndOf="@+id/image"
+                android:layout_below="@+id/title_new"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:maxLength="100"
+                />
+
+            <TextView
+                android:id="@+id/description_new"
+                style="style/TextAppearance.Small"
+                android:paddingLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/date_time_new"
+                android:text="Small Text"
+                android:layout_toEndOf="@+id/image"
+                android:maxLength="100"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

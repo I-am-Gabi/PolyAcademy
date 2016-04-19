@@ -1,12 +1,10 @@
-package polytech.unice.fr.polynews.fragment;
+package polytech.unice.fr.polynews.fragment.home;
 
 import android.app.Fragment;
 import android.os.Bundle;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import polytech.unice.fr.polynews.R;
 

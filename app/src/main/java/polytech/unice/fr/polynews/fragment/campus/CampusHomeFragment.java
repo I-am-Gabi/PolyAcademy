@@ -1,4 +1,4 @@
-package polytech.unice.fr.polynews.fragment;
+package polytech.unice.fr.polynews.fragment.campus;
 
 import android.app.Fragment;
 import android.app.FragmentManager;

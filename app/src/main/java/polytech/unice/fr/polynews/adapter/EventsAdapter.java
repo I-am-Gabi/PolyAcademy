@@ -18,9 +18,15 @@ import polytech.unice.fr.polynews.model.Event;
 /**
  * @version 03/04/16.
  */
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
+public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder> implements View.OnClickListener{
+    //define interface
+    public static interface OnRecyclerViewItemClickListener{
+        void onItemClick(View view, String data);
+    }
+
     private List<Event> dataSet;
     private Context context;
+    private OnRecyclerViewItemClickListener mOnItemClickListener = null;
 
     // Provide a reference to the views for each data item
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -38,14 +44,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         }
     }
 
+
     // Provide a suitable constructor (depends on the kind of dataset)
-    public RecyclerViewAdapter(Context context) {
+    public EventsAdapter(Context context) {
         this.context = context;
         this.dataSet = setDataSet();
     }
 
     @Override
-    public RecyclerViewAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public EventsAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         // create a new view
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_event, parent, false);
         return new ViewHolder(v);
@@ -60,6 +67,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.description.setText(dataSet.get(position).getDescription());
         holder.date_time.setText(dataSet.get(position).getDateTime());
         holder.local.setText(dataSet.get(position).getLocal());
+    }
+
+    @Override
+    public void onClick(View v){
+        if(mOnItemClickListener != null){
+            mOnItemClickListener.onItemClick(v,(String)v.getTag());
+        }
+    }
+
+    public void setOnItemClickListener(OnRecyclerViewItemClickListener listener){
+        this.mOnItemClickListener = listener;
     }
 
     // Return the size of your dataset (invoked by the layout manager)
@@ -78,5 +96,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         }
 
         return dbHelper.selectRecords();
+    }
+
+    public List<Event> getDataSet(){
+        return dataSet;
     }
 }
