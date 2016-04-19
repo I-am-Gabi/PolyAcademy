@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -10,13 +11,15 @@
     android:background="@drawable/polytech_nice"
     android:id="@+id/home_view">
 
-    <Button
-        android:id="@+id/button1"
+    <polytech.unice.fr.polynews.button.MaterialButton
+        android:id="@+id/plus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true" android:text="@string/next"/>
-
-    c
+        custom:colore="#c3c3c3"
+        custom:transitionTime="1200"
+        android:elevation="2dp"
+        android:layout_alignParentBottom="true"
+        />
 
 
     <TextView
