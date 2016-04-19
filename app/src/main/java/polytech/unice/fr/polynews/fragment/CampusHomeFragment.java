@@ -39,19 +39,29 @@ public class CampusHomeFragment extends Fragment {
             public void onClick(View v) {
                 CampusFragment newfragment = CampusFragment.newInstance();
                 FragmentManager fragmentManager = getFragmentManager();
-
-/*                String tmp = new String(button.getText().toString());
-                System.out.println("valeur du bouton = " + tmp.toUpperCase());
-                DescribeCampus value = DescribeCampus.valueOf(tmp.toUpperCase());
-                View rootView = inflater.inflate(R.layout.view_campus, container, false);
-                TextView t = (TextView) rootView.findViewById(R.id.Description_Campus);
-                System.out.println("le textview = " + t);
-                t.setText("ICI CEST PARIS");
-                t = (TextView) rootView.findViewById(R.id.Nom_du_lieu);
-                t.setText("ICI CEST VENISE");*/
-                fragmentManager.beginTransaction().replace(R.id.layout_campus, newfragment).commit();
+                fragmentManager.beginTransaction().replace(R.id.content, newfragment).commit();
             }
         });
+        final Button button1 = (Button) rootView.findViewById(R.id.buttonLearning);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LearningFragment newfragment = LearningFragment.newInstance();
+                FragmentManager fragmentManager = getFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.content, newfragment).commit();
+            }
+        });
+
+        final Button button2 = (Button) rootView.findViewById(R.id.buttoncantine);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CantineFragment newfragment = CantineFragment.newInstance();
+                FragmentManager fragmentManager = getFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.content ,newfragment).commit();
+            }
+        });
+
 
         return rootView;
     }

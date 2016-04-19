@@ -2,33 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="1"
-    android:background="#ffffff"
-    >
+    android:id="@+id/cantineLayout">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView2"
+        android:id="@+id/imageView4"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/premiereimage"/>
+        android:src="@drawable/cafeteria"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="NOM DU LIEU"
-        android:id="@+id/Nom_du_lieu"
+        android:text="@string/cantine"
+        android:id="@+id/textView4"
         android:layout_gravity="center_horizontal" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text=""
-        android:id="@+id/Description_Campus"
-        android:layout_weight="0.35" />
-
-
-
 </LinearLayout>

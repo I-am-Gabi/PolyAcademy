@@ -9,14 +9,14 @@ import android.view.ViewGroup;
 import polytech.unice.fr.polynews.R;
 
 /**
- * Created by cesar on 15/04/2016.
+ * Created by cesar on 19/04/2016.
  */
-public class CampusFragment extends Fragment{
+public class CantineFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         //return super.onCreateView(inflater, container, savedInstanceState);
-        return inflater.inflate(R.layout.layout_templier, container, false);
+        return inflater.inflate(R.layout.layout_cantine, container, false);
     }
 
     @Override
@@ -24,8 +24,8 @@ public class CampusFragment extends Fragment{
         super.onViewCreated(view, savedInstanceState);
     }
 
-    public static CampusFragment newInstance(){
-        CampusFragment fragment = new CampusFragment();
+    public static CantineFragment newInstance(){
+        CantineFragment fragment = new CantineFragment();
 
         return fragment;
     }
