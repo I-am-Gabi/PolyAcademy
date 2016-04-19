@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import polytech.unice.fr.polynews.R;
-import polytech.unice.fr.polynews.adapter.RecyclerViewAdapter;
+import polytech.unice.fr.polynews.adapter.EventsAdapter;
 
 /**
  * @version 02/04/16.
@@ -31,7 +31,7 @@ public class EventsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.activity_card_view, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_event, container, false);
 
 
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view);
@@ -39,7 +39,7 @@ public class EventsFragment extends Fragment {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setHasFixedSize(true);
 
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(getActivity());
+        EventsAdapter adapter = new EventsAdapter(getActivity());
         recyclerView.setAdapter(adapter);
 
         return rootView;
