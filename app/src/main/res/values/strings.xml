@@ -13,10 +13,20 @@
     <string name="text_header">PolyAcademy</string>
 
     <string name="hello_events">Events PolyAcademy</string>
-    <string name="hello_home">Home PolyAcademy</string>
+    <string name="hello_home">Events PolyAcademy</string>
     <string name="database_events_path">/data/data/polytech.unice.fr.polynews/databases/</string>
+    <string name="templier">Polytech Nice-Sophia affiche clairement sa volonté d’ouverture sur le monde industriel. Dans un environnement favorable, notre école forme des ingénieurs ayant une base scientifique et technique solide, possédant une bonne culture d’entreprise, capables de communiquer et initiés aux fonctions d’encadrement. Nous offrons une formation en adéquation avec les besoins de l’entreprise. 95% de nos diplômés trouvent un emploi dans les 3 mois qui suivent la sortie de notre école. Nous sommes nés en 2005 du regroupement de plusieurs écoles d\'ingénieurs locales : de l\'Ecole Supérieure d\'Ingénieurs de Nice Sophia Antipolis (ESINSA), de l\'Ecole Supérieure en Sciences Informatiques (ESSI) et du Magistère de Pharmacologie de l\'Université.</string>
+    <string name="learning">Les rencontres Accès Libre ou Install Parties : ces soirées sont ouvertes à tous, que vous soyez curieux, passionné, débutant ou expert. Venez tester, découvrir et installer Linux sur votre ordinateur. Rendez-vous un mardi par mois de 17h30 à 19h30 • Mardi 9 février • Mardi 8 mars • Mardi 19 avril • Mardi 10 mai Présentation des jeux vidéos des étudiants du Master MAJE • Mercredi 9 mars à partir de 10h Les Cafés Techno LC/INRIA Alumni • Lundi 14 mars à 13h : dans le cadre de la «semaine du cerveau», rencontre avec Maureen Clerc, prix Pierre Faurre de l’Académie des Sciences Les petits-déjeuners d’entreprise • Jeudi 3 mars de 8h30 à 10h30 : « Comment développer ses réseaux dans la durée pour créer de la valeur ajoutée», en collaboration avec Agyca Les formations • Vendredi 26 février de 9h30 à 12h30 : UNS Pod et les vidéothèques • Jeudi 10 mars de 13h à 16h : Publiciser ses travaux de recherche • Mardi 22 mars de 14h à 17h : Wims, exercices d’évaluation en ligne • Lundi 25 avril de 14h à 17h : Screencast • Mercredi 25 mai de 14h à 17h : Outils de présentation pour une pédagogie interactive • Vendredi 27 mai de 14h à 17h : Boîtiers de vote électronique, sondage en classe, pédagogie inversée Les Ateliers du Libre • Jeudi 11 février de 14h à 17h : Concevoir ses affiches et ses posters scientifiques avec Inkscape</string>
+    <string name="cantine">Site de restoration du site sophia/antipolis; prix réduit ! restoration rapide réserver exclusivement aux étudiants</string>
     <string name="searching">searching tweets</string>
     <string name="user_twitter">polytechnice</string>
     <string name="error_twitter">Error twitter</string>
     <string name="title_activity_twitter_feed">TwitterFeedActivity</string>
+
+    <string name="welcome">Welcome to PolyAcademy!</string>
+    <string name="doNotShow">Do not show it again?</string>
+    <string name="next">Read more here</string>
+    <string name="welcome_text">
+
+    </string>
 </resources>

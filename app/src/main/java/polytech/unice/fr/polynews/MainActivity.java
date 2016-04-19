@@ -17,8 +17,10 @@ import com.twitter.sdk.android.core.TwitterAuthConfig;
 
 import io.fabric.sdk.android.Fabric;
 import polytech.unice.fr.polynews.activity.TwitterFeedActivity;
+import polytech.unice.fr.polynews.fragment.CampusHomeFragment;
 import polytech.unice.fr.polynews.fragment.EventsFragment;
 import polytech.unice.fr.polynews.fragment.HomeFragment;
+
 
 /**
  * @see <a href="https://github.com/smuldr/design-support-demo">Android Design Support Library Demo</a>
@@ -105,6 +107,8 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_events:
                 drawer.openDrawer(GravityCompat.START);
                 return true;
+            case R.id.nav_campus:
+                drawer.openDrawer(GravityCompat.START);
         }
 
         return super.onOptionsItemSelected(item);
@@ -158,6 +162,12 @@ public class MainActivity extends AppCompatActivity
                 getFragmentManager()
                         .beginTransaction()
                         .replace(R.id.content, HomeFragment.newInstance())
+                        .commit();
+                break;
+            case R.id.nav_campus:
+                getFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.content, CampusHomeFragment.newInstance())
                         .commit();
                 break;
             case R.id.nav_twitter:
