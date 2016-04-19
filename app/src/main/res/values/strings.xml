@@ -20,7 +20,10 @@
     <string name="error_twitter">Error twitter</string>
     <string name="title_activity_twitter_feed">TwitterFeedActivity</string>
 
-    <string name="welcome">Welcome to Polytech Nice - Sophia!</string>
+    <string name="welcome">Welcome to PolyAcademy!</string>
     <string name="doNotShow">Do not show it again?</string>
-    <string name="next">Next</string>
+    <string name="next">Read more here</string>
+    <string name="welcome_text">
+
+    </string>
 </resources>
