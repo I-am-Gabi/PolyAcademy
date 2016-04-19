@@ -15,7 +15,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import polytech.unice.fr.polynews.R;
 import polytech.unice.fr.polynews.model.Event;
 
 /**
@@ -141,9 +140,9 @@ public class EventsDBHelper extends SQLiteOpenHelper {
                 Event event = new Event();
                 event.setId(Integer.parseInt(cursor.getString(7)));
                 event.setTitle(cursor.getString(0));
-                event.setDatatime("10/10/10");
+                event.setDatetime(cursor.getString(3).split(" ")[0]);
                 event.setDescription(cursor.getString(1));
-                event.setLocal("local");
+                event.setLocal("PolyTech");
                 // Adding new to list
                 newsList.add(event);
             } while (cursor.moveToNext());

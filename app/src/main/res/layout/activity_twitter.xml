@@ -1,0 +1,29 @@
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#6a72ba"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Share it!"
+        android:textSize="20sp"
+        android:id="@+id/shareit"
+        android:textColor="#ffffff"
+        android:background="#20b2aa"
+        android:layout_marginTop="40dp"
+        android:typeface="serif"
+        android:scaleType="fitXY"
+        />
+
+    <ListView
+        android:id="@id/android:list"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ListView>
+
+</LinearLayout>

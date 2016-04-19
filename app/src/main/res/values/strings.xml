@@ -9,9 +9,18 @@
     <string name="nav_campus">Campus</string>
     <string name="nav_news">News</string>
     <string name="nav_events">Events</string>
+    <string name="nav_twitter">Share!</string>
     <string name="text_header">PolyAcademy</string>
 
     <string name="hello_events">Events PolyAcademy</string>
-    <string name="hello_home">Welcome to Polytech Nice Sophia</string>
+    <string name="hello_home">Events PolyAcademy</string>
     <string name="database_events_path">/data/data/polytech.unice.fr.polynews/databases/</string>
+    <string name="searching">searching tweets</string>
+    <string name="user_twitter">polytechnice</string>
+    <string name="error_twitter">Error twitter</string>
+    <string name="title_activity_twitter_feed">TwitterFeedActivity</string>
+
+    <string name="welcome">Welcome to Polytech Nice - Sophia!</string>
+    <string name="doNotShow">Do not show it again?</string>
+    <string name="next">Next</string>
 </resources>

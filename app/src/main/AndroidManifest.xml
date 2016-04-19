@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="polytech.unice.fr.polynews">
 
+    <!-- Permission - Internet Connect -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Permission - Network State -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Permission - Write External Storage -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
@@ -18,11 +25,26 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+
+                <data
+                    android:host="t4jsample"
+                    android:scheme="oauth" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".CardViewActivity">
-        </activity>
+        <activity android:name=".CardViewActivity"/>
+        <activity android:name=".activity.TwitterFeedActivity"/>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="59c47197f38ae92c69bc61d555e4f0ec07b50708" />
+        <!--
+             ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
     </application>
 
 </manifest>

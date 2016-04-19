@@ -34,5 +34,6 @@ public class HomeFragment extends Fragment {
        // TextView textView = (TextView) rootView.findViewById(R.id.text_home);
        // textView.setText(Html.fromHtml(getResources().getString(R.)));
         return rootView;
+       // return inflater.inflate(R.layout.fragment_home, container, false);
     }
 }
