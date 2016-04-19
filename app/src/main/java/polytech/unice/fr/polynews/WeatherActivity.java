@@ -33,7 +33,7 @@ public class WeatherActivity extends AppCompatActivity implements WeatherService
         imageView = (ImageView) findViewById(R.id.imageWeather);
         temperatureTextView = (TextView) findViewById(R.id.temperature);
         conditionTextView = (TextView) findViewById(R.id.condition);
-        locationTextView = (TextView) findViewById(R.id.condition);
+        locationTextView = (TextView) findViewById(R.id.location);
         service = new YahooWeatherService(this);
         service.refreshWeather("austin, TX");
         dialog = new ProgressDialog(this);
