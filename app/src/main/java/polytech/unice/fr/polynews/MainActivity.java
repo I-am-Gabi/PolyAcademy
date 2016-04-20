@@ -167,7 +167,6 @@ public class MainActivity extends AppCompatActivity
                         .beginTransaction()
                         .replace(R.id.content, EventsFragment.newInstance())
                         .commit();
-
                 break;
             case R.id.nav_campus:
                 getFragmentManager()
@@ -178,6 +177,11 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_twitter:
                 Intent intent = new Intent(this, TwitterFeedActivity.class);
                 this.startActivity(intent);
+                break;
+            case R.id.nav_calendar:
+                Intent intentCalendar = new Intent(this, CalendarActivity.class);
+                this.startActivity(intentCalendar);
+                break;
             case R.id.nav_news:
                 getFragmentManager()
                         .beginTransaction()

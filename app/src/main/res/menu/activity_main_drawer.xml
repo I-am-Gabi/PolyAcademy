@@ -22,5 +22,9 @@
             android:id="@+id/nav_twitter"
             android:icon="@drawable/ic_menu_share"
             android:title="@string/nav_twitter" />
+        <item
+            android:id="@+id/nav_calendar"
+            android:icon="@drawable/ic_menu_share"
+            android:title="@string/nav_calendar" />
     </group>
 </menu>

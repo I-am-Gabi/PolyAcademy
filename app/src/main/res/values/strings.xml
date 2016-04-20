@@ -10,6 +10,7 @@
     <string name="nav_news">News</string>
     <string name="nav_events">Events</string>
     <string name="nav_twitter">Share!</string>
+    <string name="nav_calendar">Calendar SI3</string>
     <string name="text_header">PolyAcademy</string>
 
     <string name="hello_events">Events PolyAcademy</string>
