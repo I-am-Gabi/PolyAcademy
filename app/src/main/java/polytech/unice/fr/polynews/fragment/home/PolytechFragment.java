@@ -1,6 +1,6 @@
 package polytech.unice.fr.polynews.fragment.home;
 
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,18 +9,23 @@ import android.view.ViewGroup;
 import polytech.unice.fr.polynews.R;
 
 /**
- * @version 02/04/16.
+ * Created by Raquel on 20/04/16.
  */
-public class HomeFragment extends Fragment {
+public class PolytechFragment extends Fragment {
     /**
-     * Returns a new instance of this polytech.unice.fr.polynews.fragment for the given section
-     * number.
-     *
-     * This fragment is responsible to the main page: Present the school, show the image gallery too.
+     * The fragment argument representing the section number for this
+     * fragment.
      */
-    public static HomeFragment newInstance() {
-        HomeFragment fragment = new HomeFragment();
+    private static final String ARG_SECTION_NUMBER = "section_number";
+
+    /**
+     * Returns a new instance of this fragment for the given section
+     * number.
+     */
+    public static PolytechFragment newInstance(int sectionNumber) {
+        PolytechFragment fragment = new PolytechFragment();
         Bundle args = new Bundle();
+        args.putInt(ARG_SECTION_NUMBER, sectionNumber);
         fragment.setArguments(args);
         return fragment;
     }

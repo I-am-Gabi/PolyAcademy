@@ -20,6 +20,7 @@ import polytech.unice.fr.polynews.activity.TwitterFeedActivity;
 import polytech.unice.fr.polynews.fragment.campus.CampusHomeFragment;
 import polytech.unice.fr.polynews.fragment.events.EventsFragment;
 import polytech.unice.fr.polynews.fragment.home.HomeFragment;
+import polytech.unice.fr.polynews.fragment.home.InfoFragment;
 import polytech.unice.fr.polynews.fragment.news.NewsFragment;
 
 
@@ -177,6 +178,7 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_twitter:
                 Intent intent = new Intent(this, TwitterFeedActivity.class);
                 this.startActivity(intent);
+
             case R.id.nav_news:
                 getFragmentManager()
                         .beginTransaction()
