@@ -22,8 +22,7 @@ public class HomeFragment extends Fragment {
     public static final int NEWS = 2;
 
     RecyclerView recyclerView;
-    private HomeAdapter mAdapter;
-    private String[] mDataset = {"29 degrees", "Know more about our University!",
+    private String[] mDataset = {"09 degrees", "Know more about our University!",
             "Flash missing, vanishes in crisis"};
     private int mDatasetTypes[] = {WEATHER, INFO, NEWS}; //view types
 
