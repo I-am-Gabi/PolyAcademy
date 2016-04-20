@@ -51,6 +51,7 @@ android {
                     'src/main/res/layout/home',
                     'src/main/res/layout/news',
                     'src/main/res/layout/twitter',
+                    'src/main/res/layout/infos',
                     'src/main/res/layout',
                     'src/main/res'
             ]

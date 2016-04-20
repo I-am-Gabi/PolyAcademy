@@ -1,4 +1,4 @@
-package polytech.unice.fr.polynews.fragment.home;
+package polytech.unice.fr.polynews.fragment.infos;
 
 import android.support.v7.app.AppCompatActivity;
 

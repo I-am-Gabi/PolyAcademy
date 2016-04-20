@@ -21,7 +21,6 @@ import polytech.unice.fr.polynews.activity.TwitterFeedActivity;
 import polytech.unice.fr.polynews.fragment.campus.CampusHomeFragment;
 import polytech.unice.fr.polynews.fragment.events.EventsFragment;
 import polytech.unice.fr.polynews.fragment.home.HomeFragment;
-import polytech.unice.fr.polynews.fragment.home.InfoFragment;
 import polytech.unice.fr.polynews.fragment.news.NewsFragment;
 
 
