@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 import polytech.unice.fr.polynews.R;
 import polytech.unice.fr.polynews.drawable.MaterialButtonDrawable;
 
-public class MaterialButton extends ImageButton{
+public class MaterialButton extends ImageButton {
 
     private MaterialButtonDrawable materialButtonDrawable;
 

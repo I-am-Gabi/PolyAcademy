@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.io.IOException;
@@ -31,6 +32,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         public TextView title;
         public TextView description;
         public TextView date_time;
+        public ImageView image_new;
         public Context context;
         private ItemClickListener clickListener;
         public final View mView;
@@ -41,8 +43,9 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
             this.context = context;
             this.title = (TextView) itemView.findViewById(R.id.title_new);
             this.description = (TextView) itemView.findViewById(R.id.description_new);
-            this.date_time = (TextView) itemView.findViewById(R.id.date_time_new);
-            itemView.setOnClickListener(this);
+            this.image_new = (ImageView) itemView.findViewById(R.id.image_new);
+            //this.date_time = (TextView) itemView.findViewById(R.id.date_time_new);
+            //itemView.setOnClickListener(this);
         }
 
         public void setClickListener(ItemClickListener itemClickListener) {
@@ -77,11 +80,12 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     public void onBindViewHolder(final ViewHolder holder, final int position) {
         // - get element from dataset at this position
         // - replace the contents of the view with that element
+
         holder.title.setText(dataSet.get(position).getTitle());
         holder.description.setText(dataSet.get(position).getDescription());
-        holder.date_time.setText(dataSet.get(position).getDateTime());
+        //holder.date_time.setText(dataSet.get(position).getDateTime());
 
-        holder.mView.setOnClickListener(new View.OnClickListener() {
+        View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Context context = v.getContext();
@@ -90,7 +94,11 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
                 intent.putExtra(ItemDetailFragment.ARG_ITEM_CONTENT, dataSet.get(position).getDescription());
                 context.startActivity(intent);
             }
-        });
+        };
+
+        holder.description.setOnClickListener(listener);
+        holder.title.setOnClickListener(listener);
+        holder.image_new.setOnClickListener(listener);
     }
 
     // Return the size of your dataset (invoked by the layout manager)
@@ -109,9 +117,5 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         }
 
         return dbHelper.selectRecords();
-    }
-
-    public List<Event> getDataSet(){
-        return dataSet;
     }
 }

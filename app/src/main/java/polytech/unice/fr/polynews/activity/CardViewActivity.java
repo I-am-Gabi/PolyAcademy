@@ -1,4 +1,4 @@
-package polytech.unice.fr.polynews;
+package polytech.unice.fr.polynews.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,6 +6,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import polytech.unice.fr.polynews.R;
 import polytech.unice.fr.polynews.adapter.EventsAdapter;
 
 public class CardViewActivity extends AppCompatActivity {

@@ -31,7 +31,7 @@
                     android:scheme="oauth" />
             </intent-filter>
         </activity>
-        <activity android:name=".CardViewActivity"/>
+        <activity android:name=".activity.CardViewActivity"/>
         <activity android:name=".activity.TwitterFeedActivity"/>
         <activity android:name=".activity.ItemDetailActivity"/>
         <meta-data

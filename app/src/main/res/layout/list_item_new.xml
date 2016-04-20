@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:gravity="center_horizontal"
     android:padding="5dp"
-    android:layout_height="150dp">
+    android:layout_height="110dp">
 
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -32,30 +32,29 @@
 
             <!-- A photo on the left. We'll just use the launcher icon. -->
             <ImageView
-                android:src="@drawable/icon"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
+                android:src="@drawable/android_icon"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:scaleType="centerCrop"
-                android:id="@+id/image" />
+                android:id="@+id/image_new" />
 
             <TextView
                 android:id="@+id/title_new"
-                style="style/TextAppearance.Medium"
                 android:paddingLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Large Text"
+                android:textSize="20sp"
                 android:layout_alignParentTop="true"
-                android:layout_toEndOf="@+id/image"
-                android:fontFamily="sans-serif-condensed"
+                android:layout_toEndOf="@id/image_new"
                 android:lineSpacingMultiplier="0.85"
                 android:singleLine="true"
                 android:maxLines="1"
                 android:ellipsize="end"
+                android:textStyle="bold"
                 />
 
-            <TextView
+            <!--<TextView
                 android:id="@+id/date_time_new"
                 style="style/TextAppearance.Small"
                 android:paddingLeft="10dp"
@@ -67,7 +66,7 @@
                 android:singleLine="true"
                 android:maxLines="1"
                 android:maxLength="100"
-                />
+                />-->
 
             <TextView
                 android:id="@+id/description_new"
@@ -75,10 +74,13 @@
                 android:paddingLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/date_time_new"
+                android:layout_below="@+id/title_new"
+                android:fontFamily="sans-serif-condensed"
                 android:text="Small Text"
-                android:layout_toEndOf="@+id/image"
-                android:maxLength="100"/>
+                android:layout_toEndOf="@id/image_new"
+                android:maxLines="3"
+                android:lines="3"
+                />
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 

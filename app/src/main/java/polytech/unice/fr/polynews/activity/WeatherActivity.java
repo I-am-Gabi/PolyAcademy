@@ -1,4 +1,4 @@
-package polytech.unice.fr.polynews;
+package polytech.unice.fr.polynews.activity;
 
 import android.app.ProgressDialog;
 import android.graphics.drawable.Drawable;
@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import polytech.unice.fr.polynews.R;
 import polytech.unice.fr.polynews.database.Channel;
 import polytech.unice.fr.polynews.database.Item;
 import polytech.unice.fr.polynews.service.WeatherServiceCallBak;

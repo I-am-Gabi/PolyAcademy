@@ -32,7 +32,7 @@
 
             <!-- A photo on the left. We'll just use the launcher icon. -->
             <ImageView
-                android:src="@drawable/icon"
+                android:src="@drawable/android_icon"
                 android:layout_width="140dp"
                 android:layout_height="140dp"
                 android:scaleType="centerCrop"
