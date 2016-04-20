@@ -69,15 +69,15 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
         View v;
         if (viewType == WEATHER) {
             v = LayoutInflater.from(viewGroup.getContext())
-                    .inflate(R.layout.home_card, viewGroup, false);
+                    .inflate(R.layout.weather, viewGroup, false);
             return new WeatherViewHolder(v);
         } else if (viewType == INFO) {
             v = LayoutInflater.from(viewGroup.getContext())
-                    .inflate(R.layout.home_card_2, viewGroup, false);
+                    .inflate(R.layout.information, viewGroup, false);
             return new ScoreViewHolder(v);
         } else {
             v = LayoutInflater.from(viewGroup.getContext())
-                    .inflate(R.layout.home_card_4, viewGroup, false);
+                    .inflate(R.layout.news, viewGroup, false);
             return new NewsViewHolder(v);
         }
     }
