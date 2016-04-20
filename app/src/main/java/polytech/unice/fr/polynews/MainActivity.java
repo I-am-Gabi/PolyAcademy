@@ -16,6 +16,7 @@ import com.twitter.sdk.android.Twitter;
 import com.twitter.sdk.android.core.TwitterAuthConfig;
 
 import io.fabric.sdk.android.Fabric;
+import polytech.unice.fr.polynews.activity.CalendarActivity;
 import polytech.unice.fr.polynews.activity.TwitterFeedActivity;
 import polytech.unice.fr.polynews.fragment.campus.CampusHomeFragment;
 import polytech.unice.fr.polynews.fragment.events.EventsFragment;
