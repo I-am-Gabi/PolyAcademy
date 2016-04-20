@@ -12,29 +12,27 @@
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="170dp"
         android:fitsSystemWindows="true"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-        <android.support.design.widget.CollapsingToolbarLayout
-            android:id="@+id/toolbar_layout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fitsSystemWindows="true"
-            app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:toolbarId="@+id/toolbar">
-
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/detail_toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
-
-        </android.support.design.widget.CollapsingToolbarLayout>
-
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Share it!"
+            android:textSize="20sp"
+            android:id="@+id/shareit"
+            android:textColor="#ffffff"
+            android:background="#20b2aa"
+            android:layout_marginTop="100dp"
+            android:typeface="serif"
+            android:scaleType="fitXY"
+            android:gravity="center"
+            android:layout_gravity="top|center"
+            />
     </android.support.design.widget.AppBarLayout>
+
+
 
     <ListView
         android:id="@id/android:list"
@@ -43,18 +41,4 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior" >
     </ListView>
 
-    <Button
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:text="Share it!"
-        android:textSize="20sp"
-        android:id="@+id/shareit"
-        android:textColor="#ffffff"
-        android:background="#20b2aa"
-        android:layout_marginTop="40dp"
-        android:typeface="serif"
-        android:scaleType="fitXY"
-        android:gravity="center"
-        android:layout_gravity="top|center"
-        />
 </android.support.design.widget.CoordinatorLayout>
