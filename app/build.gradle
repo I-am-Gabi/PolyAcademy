@@ -43,6 +43,19 @@ android {
         abortOnError false
     }
 
+    sourceSets {
+        main {
+            res.srcDirs = [
+                    'src/main/res/layout/campus',
+                    'src/main/res/layout/events',
+                    'src/main/res/layout/home',
+                    'src/main/res/layout/news',
+                    'src/main/res/layout/twitter',
+                    'src/main/res/layout',
+                    'src/main/res'
+            ]
+        }
+    }
 }
 
 dependencies {

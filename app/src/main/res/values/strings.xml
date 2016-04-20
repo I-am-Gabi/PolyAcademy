@@ -26,10 +26,13 @@
 
     <string name="welcome">Welcome to PolyAcademy!</string>
     <string name="doNotShow">Do not show it again?</string>
-    <string name="next">Read more here</string>
+    <string name="next">+</string>
     <string name="welcome_text">
 
     </string>
+
+    <string name="section_format">Hello World from section: %1$d</string>
+
 
 
 </resources>

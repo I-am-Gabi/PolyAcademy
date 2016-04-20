@@ -1,0 +1,28 @@
+<!-- A photo on the left. We'll just use the launcher icon. -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:padding="10dp"
+    android:id="@+id/layout_new_details"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:scaleType="centerCrop"
+    android:id="@+id/image_new_detail"
+    android:src="@drawable/polytech_nice"
+    android:layout_alignParentStart="true" />
+
+<TextView
+    android:id="@+id/item_detail"
+    style="?android:attr/textAppearanceLarge"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:textIsSelectable="true"
+    android:fontFamily="sans-serif-condensed"
+    android:layout_below="@+id/image_new_detail"/>
+
+</RelativeLayout>

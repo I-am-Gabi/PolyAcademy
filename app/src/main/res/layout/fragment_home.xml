@@ -11,16 +11,14 @@
     android:background="@drawable/polytech_nice"
     android:id="@+id/home_view">
 
-    <polytech.unice.fr.polynews.button.MaterialButton
-        android:id="@+id/plus"
+    <Button
+        android:id="@+id/more"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        custom:colore="#c3c3c3"
-        custom:transitionTime="1200"
         android:elevation="2dp"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/next"
         />
-
 
     <TextView
         android:id="@+id/text_home"
