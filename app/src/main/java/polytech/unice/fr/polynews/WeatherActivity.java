@@ -3,6 +3,7 @@ package polytech.unice.fr.polynews;
 import android.app.ProgressDialog;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -13,53 +14,59 @@ import polytech.unice.fr.polynews.database.Item;
 import polytech.unice.fr.polynews.service.WeatherServiceCallBak;
 import polytech.unice.fr.polynews.service.YahooWeatherService;
 
-/**
- * Created by cesar on 17/04/2016.
- */
-public class WeatherActivity extends AppCompatActivity implements WeatherServiceCallBak{
 
-    private ImageView imageView;
+public class WeatherActivity extends AppCompatActivity implements WeatherServiceCallBak {
+
+    private ImageView weatherIconImageView;
     private TextView temperatureTextView;
     private TextView conditionTextView;
     private TextView locationTextView;
-    private ProgressDialog dialog;
 
     private YahooWeatherService service;
+    private ProgressDialog dialog;
 
-    protected void OnCreate(Bundle OnSavedView){
+    @Override
+    public void OnCreate(@Nullable Bundle OnSavedView) {
         super.onCreate(OnSavedView);
         setContentView(R.layout.layout_weather);
 
-        imageView = (ImageView) findViewById(R.id.imageWeather);
+        weatherIconImageView = (ImageView) findViewById(R.id.imageWeather);
         temperatureTextView = (TextView) findViewById(R.id.temperature);
         conditionTextView = (TextView) findViewById(R.id.condition);
         locationTextView = (TextView) findViewById(R.id.location);
+
         service = new YahooWeatherService(this);
-        service.refreshWeather("austin, TX");
         dialog = new ProgressDialog(this);
-        dialog.setMessage("loading...");
+        dialog.setMessage("Loading...");
         dialog.show();
+
+        service.refreshWeather("Austin, TX");
     }
 
     @Override
-    public void serviceSucces(Channel c) {
+    public void serviceSucces(Channel channel) {
         dialog.hide();
-        Item item = c.getItem();
 
-        int ressource = getResources().getIdentifier("drawable/icon_" + item.getCondition().getCode(), null, getPackageName());
+        Item item = channel.getItem();
+
+        int resourceId = getResources().getIdentifier("drawable/icon_" + item.getCondition().getCode(), null, getPackageName());
+
         @SuppressWarnings("deprecation")
-        Drawable iconDrawable = getResources().getDrawable(ressource);
+        Drawable weatherIconDrawble = getResources().getDrawable(resourceId);
 
-        imageView.setImageDrawable(iconDrawable);
-        temperatureTextView.setText(item.getCondition().getTemperature()+ " "+ c.getUnit().getTemperature());
+        weatherIconImageView.setImageDrawable(weatherIconDrawble);
+        System.out.println(item.getCondition().getTemperature());
+        System.out.println(item.getCondition().getDescription());
+
+        temperatureTextView.setText(item.getCondition().getTemperature() + "\u00B0" + channel.getUnit().getTemperature());
         conditionTextView.setText(item.getCondition().getDescription());
         locationTextView.setText(service.getLocation());
-
     }
 
     @Override
-    public void serviceFaillure(Exception e) {
+    public void serviceFaillure(Exception exception) {
         dialog.hide();
-        Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
+        Toast.makeText(this, exception.getMessage(), Toast.LENGTH_LONG).show();
+
     }
 }

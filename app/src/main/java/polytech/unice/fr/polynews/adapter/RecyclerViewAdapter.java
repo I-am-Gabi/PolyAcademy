@@ -42,6 +42,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public RecyclerViewAdapter(Context context) {
         this.context = context;
         this.dataSet = setDataSet();
+
     }
 
     @Override

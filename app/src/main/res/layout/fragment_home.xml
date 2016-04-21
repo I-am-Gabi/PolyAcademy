@@ -29,4 +29,16 @@
         android:text="@string/welcome"
         android:textSize="18sp"
         />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/button1"
+        android:id="@+id/weather_home"
+        >
+
+    </LinearLayout>
+
+
 </RelativeLayout>

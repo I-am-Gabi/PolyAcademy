@@ -23,15 +23,19 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
-
                 <data
                     android:host="t4jsample"
                     android:scheme="oauth" />
             </intent-filter>
         </activity>
         <activity android:name=".CardViewActivity"/>
+
+        <activity
+            android:name=".WeatherActivity"
+            android:parentActivityName=".MainActivity">
+        </activity>
+
         <activity android:name=".activity.TwitterFeedActivity"/>
 
         <meta-data
