@@ -20,6 +20,7 @@ import polytech.unice.fr.polynews.activity.TwitterFeedActivity;
 import polytech.unice.fr.polynews.fragment.campus.CampusHomeFragment;
 import polytech.unice.fr.polynews.fragment.events.EventsFragment;
 import polytech.unice.fr.polynews.fragment.home.HomeFragment;
+import polytech.unice.fr.polynews.fragment.infos.InfoFragment;
 import polytech.unice.fr.polynews.fragment.news.NewsFragment;
 
 
@@ -159,6 +160,12 @@ public class MainActivity extends AppCompatActivity
                 getFragmentManager()
                         .beginTransaction()
                         .replace(R.id.content, HomeFragment.newInstance())
+                        .commit();
+                break;
+            case R.id.nav_infos:
+                getFragmentManager()
+                        .beginTransaction()
+                        //.replace(R.id.content, InfoFragment.newInstance())
                         .commit();
                 break;
             case R.id.nav_events:
