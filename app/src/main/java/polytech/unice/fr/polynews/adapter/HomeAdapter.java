@@ -121,7 +121,6 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
                     context.startActivity(intent);
                 }
             };
-
             holder.read_more.setOnClickListener(listener);
         }
         else {
