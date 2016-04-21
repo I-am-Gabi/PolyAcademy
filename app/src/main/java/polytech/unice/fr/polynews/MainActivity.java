@@ -188,4 +188,8 @@ public class MainActivity extends AppCompatActivity
                 break;
         }
     }
+
+    public void setFragment(int whichFragment) {
+        navigationHandler(whichFragment);
+    }
 }

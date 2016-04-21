@@ -54,8 +54,8 @@ public class ItemDetailFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.item_detail, container, false);
 
+        //((TextView) rootView.findViewById(R.id.item_detail)).setTextAlignment(TextAlignment.JUSTIFIED);
         ((TextView) rootView.findViewById(R.id.item_detail)).setText(getArguments().getString(ARG_ITEM_CONTENT));
-
         return rootView;
     }
 }
