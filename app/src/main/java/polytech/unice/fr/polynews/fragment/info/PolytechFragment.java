@@ -18,7 +18,7 @@ public class PolytechFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.about_polytech, container, false);
         WebView web = (WebView) v.findViewById(R.id.polytech_webView);
-        web.loadUrl("https://polytechsi3.wordpress.com");
+        //web.loadUrl("https://polytechsi3.wordpress.com");
         return v;
     }
 }

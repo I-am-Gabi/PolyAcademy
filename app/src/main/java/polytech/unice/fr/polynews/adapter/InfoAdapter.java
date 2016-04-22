@@ -1,7 +1,9 @@
 package polytech.unice.fr.polynews.adapter;
 
 /**
- * @version 21/04/16.
+ *
+ * Created by hp1 on 21-01-2015.
+ * @version adapted by Raquel 21/04/16.
  */
 
 import android.support.v4.app.Fragment;
@@ -13,9 +15,6 @@ import polytech.unice.fr.polynews.fragment.info.GalleryFragment;
 import polytech.unice.fr.polynews.fragment.info.PlanningFragment;
 import polytech.unice.fr.polynews.fragment.info.PolytechFragment;
 
-/**
- * Created by hp1 on 21-01-2015.
- */
 public class InfoAdapter extends FragmentStatePagerAdapter {
 
     private CharSequence Titles[]; // This will Store the Titles of the Tabs which are Going to be passed when ViewPagerAdapter is created

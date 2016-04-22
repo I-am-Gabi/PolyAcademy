@@ -32,7 +32,7 @@
             android:layout_marginTop="16dp"
             android:id="@+id/read_more"
             android:background="#f2f2f2"
-            android:text="Read More" />
+            android:text="@+id/read_more" />
     </LinearLayout>
 
 </android.support.v7.widget.CardView>
