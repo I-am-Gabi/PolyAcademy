@@ -1,4 +1,4 @@
-package polytech.unice.fr.polynews.fragment.infos.tab;
+package polytech.unice.fr.polynews.fragment.info.tab;
 
 /*
  * Copyright 2014 Google Inc. All rights reserved.

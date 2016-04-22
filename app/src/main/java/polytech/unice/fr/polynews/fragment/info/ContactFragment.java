@@ -1,4 +1,4 @@
-package polytech.unice.fr.polynews.fragment.infos;
+package polytech.unice.fr.polynews.fragment.info;
 
 /**
  * Created by Raquel on 20/04/16.
