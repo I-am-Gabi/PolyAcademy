@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 
 import polytech.unice.fr.polynews.R;
 
@@ -16,7 +17,9 @@ import polytech.unice.fr.polynews.R;
 public class PlanningFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.planning,container,false);
+        View v = inflater.inflate(R.layout.planning, container, false);
+        WebView web = (WebView) v.findViewById(R.id.planning_webView);
+        web.loadUrl("http://users.polytech.unice.fr/~pfz/COURS_SSHOW/final.html");
         return v;
     }
 }
