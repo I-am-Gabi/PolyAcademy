@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/info_layout"
-    tools:context=".fragment.info.InfoActivity">
+    tools:context=".activity.InfoActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"

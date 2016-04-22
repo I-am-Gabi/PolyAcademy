@@ -1,4 +1,4 @@
-package polytech.unice.fr.polynews.fragment.info;
+package polytech.unice.fr.polynews.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.support.v4.view.ViewPager;
