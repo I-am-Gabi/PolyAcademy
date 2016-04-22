@@ -28,7 +28,7 @@ import polytech.unice.fr.polynews.model.Event;
  *     Android SQLite Database Tutorial
  *     </a>
  */
-public class EventsDBHelper extends SQLiteOpenHelper {
+public class NewsDBHelper extends SQLiteOpenHelper {
     public static final String TAG = "MyActivity";
     // Database Version
     private static final int DATABASE_VERSION = 1;
@@ -42,7 +42,7 @@ public class EventsDBHelper extends SQLiteOpenHelper {
     private SQLiteDatabase myDataBase;
     private final Context myContext;
 
-    public EventsDBHelper(Context context) {
+    public NewsDBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         this.myContext = context;
     }
@@ -131,7 +131,7 @@ public class EventsDBHelper extends SQLiteOpenHelper {
      * @return all records in the table news
      */
     public List<Event> selectRecords() {
-        Cursor cursor = myDataBase.rawQuery("SELECT * FROM " + TABLE_EVENTS + " ORDER BY _id DESC ", null);
+        Cursor cursor = myDataBase.rawQuery("SELECT * FROM " + TABLE_EVENTS, null);
         List<Event> newsList = new ArrayList<>();
 
         // looping through all rows and adding to list
@@ -151,5 +151,19 @@ public class EventsDBHelper extends SQLiteOpenHelper {
         cursor.close();
         myDataBase.close();
         return newsList;
+    }
+
+    public Event selectTopRecord() {
+        Cursor cursor = myDataBase.rawQuery("SELECT * FROM " + TABLE_EVENTS + " where _id = (SELECT MAX(_id) FROM " + TABLE_EVENTS + ");", null);
+        Event last_news = new Event();
+
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            last_news.setTitle(cursor.getString(0));
+            last_news.setDescription(cursor.getString(1));
+        }
+        cursor.close();
+        myDataBase.close();
+        return last_news;
     }
 }

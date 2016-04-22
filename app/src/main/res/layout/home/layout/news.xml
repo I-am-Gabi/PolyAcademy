@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:id="@+id/read_more"
-            android:background="#fff"
+            android:background="#f2f2f2"
             android:text="Read More" />
     </LinearLayout>
 
