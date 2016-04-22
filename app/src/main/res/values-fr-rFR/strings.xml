@@ -57,7 +57,7 @@
     <string name="weather_condition">Condition</string>
 
     <!-- Database -->
-    <string name="error_database">L'error sur la base de données</string>
+    <string name="error_database">Error sur la base de données</string>
     <string name="error_database2">"N'existe base de données"</string>
 
 
