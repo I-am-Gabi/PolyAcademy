@@ -8,6 +8,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+import polytech.unice.fr.polynews.fragment.info.ContactFragment;
+import polytech.unice.fr.polynews.fragment.info.GaleryFragment;
 import polytech.unice.fr.polynews.fragment.info.PlanningFragment;
 import polytech.unice.fr.polynews.fragment.info.PolytechFragment;
 
@@ -16,8 +18,8 @@ import polytech.unice.fr.polynews.fragment.info.PolytechFragment;
  */
 public class InfoAdapter extends FragmentStatePagerAdapter {
 
-    CharSequence Titles[]; // This will Store the Titles of the Tabs which are Going to be passed when ViewPagerAdapter is created
-    int NumbOfTabs; // Store the number of tabs, this will also be passed when the ViewPagerAdapter is created
+    private CharSequence Titles[]; // This will Store the Titles of the Tabs which are Going to be passed when ViewPagerAdapter is created
+    private int NumbOfTabs; // Store the number of tabs, this will also be passed when the ViewPagerAdapter is created
 
 
     // Build a Constructor and assign the passed Values to appropriate values in the class
@@ -38,10 +40,20 @@ public class InfoAdapter extends FragmentStatePagerAdapter {
             PolytechFragment about_polytech = new PolytechFragment();
             return about_polytech;
         }
-        else             // As we are having 2 tabs if the position is now 0 it must be 1 so we are returning second tab
+        else if (position == 1)
         {
             PlanningFragment planningFragment = new PlanningFragment();
             return planningFragment;
+        }
+        else if (position == 3)
+        {
+            ContactFragment contactFragment = new ContactFragment();
+            return contactFragment;
+        }
+        else
+        {
+            GaleryFragment galeryFragment = new GaleryFragment();
+            return galeryFragment;
         }
 
 
