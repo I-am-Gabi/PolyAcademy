@@ -14,7 +14,6 @@ import polytech.unice.fr.polynews.fragment.info.tab.SlidingTabLayout;
  *
  */
 public class InfoActivity extends AppCompatActivity{
-    //private Toolbar toolbar;
     private ViewPager pager;
     private InfoAdapter adapter;
     private SlidingTabLayout tabs;
@@ -26,11 +25,6 @@ public class InfoActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
        // getSupportActionBar().hide();
-
-        // Creating The Toolbar and setting it as the Toolbar for the activity
-        //toolbar = (Toolbar) findViewById(R.id.tool_bar);
-        //setSupportActionBar(toolbar);
-
 
         // Creating The ViewPagerAdapter and Passing Fragment Manager, Titles fot the Tabs and Number Of Tabs.
         adapter =  new InfoAdapter(getSupportFragmentManager(),Titles,nb_tabs);
@@ -57,27 +51,4 @@ public class InfoActivity extends AppCompatActivity{
 
 
     }
-
-    /*@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }*/
-
 }
