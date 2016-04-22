@@ -147,7 +147,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> im
                     Context context = v.getContext();
                     //Intent intent = new Intent(context, ItemDetailActivity.class);
                     //context.startActivity(intent);
-                    Toast toast = Toast.makeText(context, "READ MORE", Toast.LENGTH_SHORT);
+                    Toast toast = Toast.makeText(context, "@+id/read_more", Toast.LENGTH_SHORT);
                     toast.show();
                 }
             };
