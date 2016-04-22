@@ -34,6 +34,8 @@
         <activity android:name=".activity.CardViewActivity"/>
         <activity android:name=".activity.TwitterFeedActivity"/>
         <activity android:name=".activity.ItemDetailActivity"/>
+        <activity android:name=".fragment.info.InfoActivity"/>
+
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="59c47197f38ae92c69bc61d555e4f0ec07b50708" />
