@@ -7,9 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import polytech.unice.fr.polynews.MainActivity;
 import polytech.unice.fr.polynews.R;
 import polytech.unice.fr.polynews.fragment.news.ItemDetailFragment;
-import polytech.unice.fr.polynews.fragment.news.NewsFragment;
 
 /**
  * An activity representing a single Item detail screen. This
@@ -23,7 +23,6 @@ public class ItemDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_detail);
         Toolbar toolbar = (Toolbar) findViewById(R.id.detail_toolbar);
-        //setSupportActionBar(toolbar);
 
         // Show the Up button in the action bar.
         ActionBar actionBar = getSupportActionBar();
@@ -65,10 +64,11 @@ public class ItemDetailActivity extends AppCompatActivity {
             // more details, see the Navigation pattern on Android Design:
             //
             // http://developer.android.com/design/patterns/navigation.html#up-vs-back
-            //
-            navigateUpTo(new Intent(this, NewsFragment.class));
+            Intent upIntent = new Intent(this, MainActivity.class);
+            navigateUpTo(upIntent);
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

@@ -54,12 +54,8 @@ public class ItemDetailFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.item_detail, container, false);
 
-        // Show the dummy content as text in a TextView.
-        //if (mItem != null) {
+        //((TextView) rootView.findViewById(R.id.item_detail)).setTextAlignment(TextAlignment.JUSTIFIED);
         ((TextView) rootView.findViewById(R.id.item_detail)).setText(getArguments().getString(ARG_ITEM_CONTENT));
-        //((ImageView) rootView.findViewById(R.id.image_new_detail)).setImageResource(R.drawable.polytech_nice);
-        //}
-
         return rootView;
     }
 }
