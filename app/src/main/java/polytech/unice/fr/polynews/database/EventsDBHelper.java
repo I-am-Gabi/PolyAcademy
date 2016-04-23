@@ -15,6 +15,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import polytech.unice.fr.polynews.R;
 import polytech.unice.fr.polynews.model.Event;
 
 /**
@@ -56,7 +57,7 @@ public class EventsDBHelper extends SQLiteOpenHelper {
             try {
                 copyDataBase();
             } catch (IOException e) {
-                throw new Error("Error to read database");
+                throw new Error(myContext.getString(R.string.error_database));
             }
         }
     }
@@ -67,7 +68,7 @@ public class EventsDBHelper extends SQLiteOpenHelper {
             String myPath = DATABASE_PATH + DATABASE_NAME;
             checkDB = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READONLY);
         } catch(SQLiteException e){
-            Log.e(TAG, "Error to open database");
+            Log.e(TAG, myContext.getString(R.string.error_database2));
         }
         if(checkDB != null){
             checkDB.close();
