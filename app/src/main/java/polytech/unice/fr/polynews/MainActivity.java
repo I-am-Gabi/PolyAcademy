@@ -21,9 +21,10 @@ import com.twitter.sdk.android.core.TwitterAuthConfig;
 
 import io.fabric.sdk.android.Fabric;
 import polytech.unice.fr.polynews.activity.TwitterFeedActivity;
-import polytech.unice.fr.polynews.fragment.CampusHomeFragment;
-import polytech.unice.fr.polynews.fragment.EventsFragment;
-import polytech.unice.fr.polynews.fragment.HomeFragment;
+import polytech.unice.fr.polynews.fragment.campus.CampusHomeFragment;
+import polytech.unice.fr.polynews.fragment.events.EventsFragment;
+import polytech.unice.fr.polynews.fragment.home.HomeFragment;
+import polytech.unice.fr.polynews.fragment.news.NewsFragment;
 
 import static polytech.unice.fr.polynews.R.string.navigation_drawer_close;
 
@@ -121,6 +122,9 @@ public class MainActivity extends AppCompatActivity
                 return true;
             case R.id.nav_campus:
                 drawer.openDrawer(GravityCompat.START);
+            case R.id.nav_news:
+                drawer.openDrawer(GravityCompat.START);
+                return true;
         }
 
         return super.onOptionsItemSelected(item);
@@ -165,18 +169,18 @@ public class MainActivity extends AppCompatActivity
      */
     public void navigationHandler(int menuItemId) {
         switch (menuItemId) {
+            case R.id.nav_home:
+                getFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.content, HomeFragment.newInstance())
+                        .commit();
+                break;
             case R.id.nav_events:
                 getFragmentManager()
                         .beginTransaction()
                         .replace(R.id.content, EventsFragment.newInstance())
                         .commit();
 
-                break;
-            case R.id.nav_home:
-                getFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.content, HomeFragment.newInstance())
-                        .commit();
                 break;
             case R.id.nav_campus:
                 getFragmentManager()
@@ -187,6 +191,13 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_twitter:
                 Intent intent = new Intent(this, TwitterFeedActivity.class);
                 this.startActivity(intent);
+            case R.id.nav_news:
+                getFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.content, NewsFragment.newInstance())
+                        .commit();
+                break;
+
             default:
                 break;
         }
@@ -231,5 +242,8 @@ public class MainActivity extends AppCompatActivity
         );
         AppIndex.AppIndexApi.end(client, viewAction);
         client.disconnect();
+    }
+    public void setFragment(int whichFragment) {
+        navigationHandler(whichFragment);
     }
 }

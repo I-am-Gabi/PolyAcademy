@@ -35,6 +35,24 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs = [
+                    'src/main/res/layout/campus',
+                    'src/main/res/layout/events',
+                    'src/main/res/layout/home',
+                    'src/main/res/layout/news',
+                    'src/main/res/layout/twitter',
+                    'src/main/res/layout',
+                    'src/main/res'
+            ]
+        }
+    }
 }
 
 dependencies {
@@ -52,4 +70,5 @@ dependencies {
     }
     compile 'org.twitter4j:twitter4j-core:4.0.2'
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    compile 'me.biubiubiu.justifytext:library:1.1'
 }

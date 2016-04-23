@@ -1,4 +1,4 @@
-package polytech.unice.fr.polynews.fragment;
+package polytech.unice.fr.polynews.fragment.home;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -10,19 +10,30 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import polytech.unice.fr.polynews.R;
-import polytech.unice.fr.polynews.adapter.RecyclerViewAdapter;
+import polytech.unice.fr.polynews.adapter.HomeAdapter;
 
 /**
  * @version 02/04/16.
  */
-public class EventsFragment extends Fragment {
+public class HomeFragment extends Fragment {
+
+    public static final int WEATHER = 0;
+    public static final int INFO = 1;
+    public static final int NEWS = 2;
+
     RecyclerView recyclerView;
+    private String[] mDataset = {"09 degrees", "Know more about our University!",
+            "Flash missing, vanishes in crisis"};
+    private int mDatasetTypes[] = {WEATHER, INFO, NEWS}; //view types
+
     /**
      * Returns a new instance of this polytech.unice.fr.polynews.fragment for the given section
      * number.
+     *
+     * This fragment is responsible to the main page: Present the school, show the image gallery too.
      */
-    public static EventsFragment newInstance() {
-        EventsFragment fragment = new EventsFragment();
+    public static HomeFragment newInstance() {
+        HomeFragment fragment = new HomeFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -31,15 +42,13 @@ public class EventsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.activity_card_view, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_home, container, false);
 
-
-        recyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view);
+        recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setHasFixedSize(true);
 
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(getActivity());
+        HomeAdapter adapter = new HomeAdapter(mDataset, mDatasetTypes);
         recyclerView.setAdapter(adapter);
 
         return rootView;

@@ -10,7 +10,7 @@
 
     <!-- Permission - Write External Storage -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -29,15 +29,9 @@
                     android:scheme="oauth" />
             </intent-filter>
         </activity>
-        <activity android:name=".CardViewActivity"/>
-
-        <activity
-            android:name=".WeatherActivity"
-            android:parentActivityName=".MainActivity">
-        </activity>
-
+        <activity android:name=".activity.CardViewActivity"/>
         <activity android:name=".activity.TwitterFeedActivity"/>
-
+        <activity android:name=".activity.ItemDetailActivity"/>
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="59c47197f38ae92c69bc61d555e4f0ec07b50708" />

@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageWeather"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/default_weather"/>/>
+        android:src="@drawable/default_weather"/>
 
     <TextView
         android:layout_width="wrap_content"

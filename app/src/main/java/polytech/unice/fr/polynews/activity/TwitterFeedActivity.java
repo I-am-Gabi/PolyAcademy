@@ -1,10 +1,12 @@
 package polytech.unice.fr.polynews.activity;
 
-import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +16,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+import polytech.unice.fr.polynews.MainActivity;
 import polytech.unice.fr.polynews.R;
 import polytech.unice.fr.polynews.adapter.TweetAdapter;
 import polytech.unice.fr.polynews.model.Tweet;
@@ -27,7 +30,7 @@ import twitter4j.conf.ConfigurationBuilder;
 /**
  * @version 06/04/16.
  */
-public class TwitterFeedActivity extends ListActivity {
+public class TwitterFeedActivity extends AppCompatActivity {
     private static final String TWIT_CONS_KEY = "KXD76JSTl2g5SoRjWBO0zTcCW";
     private static final String TWIT_CONS_SEC_KEY = "yhqjfad0Jj9KZtpaXglsLLRiD4A4Va6VTkNgTFcHYbnovQ8csT";
     protected ListView list;
@@ -36,6 +39,13 @@ public class TwitterFeedActivity extends ListActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_twitter);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.detail_toolbar);
+        // Show the Up button in the action bar.
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
 
         Button btn_share = (Button)findViewById(R.id.shareit);
         assert btn_share != null;
@@ -61,11 +71,17 @@ public class TwitterFeedActivity extends ListActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
+        if (id == android.R.id.home) {
+            // This ID represents the Home or Up button. In the case of this
+            // activity, the Up button is shown. For
+            // more details, see the Navigation pattern on Android Design:
+            //
+            // http://developer.android.com/design/patterns/navigation.html#up-vs-back
+            //
+            navigateUpTo(new Intent(this, MainActivity.class));
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 
