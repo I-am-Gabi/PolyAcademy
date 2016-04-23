@@ -1,7 +1,7 @@
 package polytech.unice.fr.polynews.adapter;
 
 /**
- * @versao 06/04/16.
+ * @version 06/04/16.
  */
 
 import android.content.Context;
