@@ -19,7 +19,7 @@
         <Button
             android:layout_width="150dp"
             android:layout_height="50dp"
-            android:text="Share it!"
+            android:text="@+id/twitter_share"
             android:textSize="20sp"
             android:id="@+id/shareit"
             android:textColor="#ffffff"
