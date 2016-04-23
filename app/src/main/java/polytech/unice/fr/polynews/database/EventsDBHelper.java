@@ -56,7 +56,7 @@ public class EventsDBHelper extends SQLiteOpenHelper {
             try {
                 copyDataBase();
             } catch (IOException e) {
-                throw new Error("@+id/error_database");
+                throw new Error("Error to read database");
             }
         }
     }
@@ -67,7 +67,7 @@ public class EventsDBHelper extends SQLiteOpenHelper {
             String myPath = DATABASE_PATH + DATABASE_NAME;
             checkDB = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READONLY);
         } catch(SQLiteException e){
-            Log.e(TAG, "@+id/error_database2");
+            Log.e(TAG, "Error to open database");
         }
         if(checkDB != null){
             checkDB.close();
@@ -142,7 +142,7 @@ public class EventsDBHelper extends SQLiteOpenHelper {
                 event.setTitle(cursor.getString(0));
                 event.setDatetime(cursor.getString(3).split(" ")[0]);
                 event.setDescription(cursor.getString(1));
-                event.setLocal("@+id/title_polytech");
+                event.setLocal("Polytech");
                 // Adding new to list
                 newsList.add(event);
             } while (cursor.moveToNext());

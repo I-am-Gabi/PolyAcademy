@@ -56,7 +56,7 @@ public class NewsDBHelper extends SQLiteOpenHelper {
             try {
                 copyDataBase();
             } catch (IOException e) {
-                throw new Error("@+id/error_database");
+                throw new Error("Error to read database");
             }
         }
     }
@@ -67,7 +67,7 @@ public class NewsDBHelper extends SQLiteOpenHelper {
             String myPath = DATABASE_PATH + DATABASE_NAME;
             checkDB = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READONLY);
         } catch(SQLiteException e){
-            Log.e(TAG, "@+id/error_database2");
+            Log.e(TAG, "Error to open database");
         }
         if(checkDB != null){
             checkDB.close();
