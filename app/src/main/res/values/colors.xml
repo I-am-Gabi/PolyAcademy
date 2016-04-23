@@ -3,6 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="tabsScrollColor">#6B238E</color>
 
     <!--https://github.com/andreasschrade/android-design-template-->
     <color name="theme_primary_accent">#8BC34A</color>

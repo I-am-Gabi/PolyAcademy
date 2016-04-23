@@ -31,8 +31,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:id="@+id/read_more"
-            android:background="#fff"
-            android:text="Read More" />
+            android:background="#f2f2f2"
+            android:text="@+id/read_more" />
     </LinearLayout>
 
 </android.support.v7.widget.CardView>
