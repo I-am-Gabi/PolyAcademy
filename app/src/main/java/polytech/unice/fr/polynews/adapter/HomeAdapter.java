@@ -177,6 +177,5 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> im
 
     @Override
     public void serviceFaillure(Exception e) {
-
     }
 }
