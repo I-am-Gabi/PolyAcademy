@@ -49,6 +49,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder
     public EventsAdapter(Context context) {
         this.context = context;
         this.dataSet = setDataSet();
+
     }
 
     @Override
