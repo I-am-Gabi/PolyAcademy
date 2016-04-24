@@ -142,7 +142,7 @@ public class NewsDBHelper extends SQLiteOpenHelper {
                 event.setTitle(cursor.getString(0));
                 event.setDatetime(cursor.getString(3).split(" ")[0]);
                 event.setDescription(cursor.getString(1));
-                event.setLocal("PolyTech");
+                event.setLocal("Polytech");
                 // Adding new to list
                 newsList.add(event);
             } while (cursor.moveToNext());
