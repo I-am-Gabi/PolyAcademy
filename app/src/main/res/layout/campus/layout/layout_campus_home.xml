@@ -15,7 +15,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@+id/title_learning"
+        android:text="@string/title_learning"
         android:id="@+id/buttonLearning"
         android:layout_gravity="center_horizontal" />
 
@@ -27,7 +27,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@+id/title_cantine"
+            android:text="@string/title_cantine"
             android:id="@+id/buttoncantine"
             android:layout_gravity="right"
             android:layout_row="6"
@@ -37,7 +37,7 @@
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@+id/title_templier"
+            android:text="@string/title_templier"
             android:id="@+id/buttonTemplier"
             android:layout_gravity="right"
             android:layout_row="7"
