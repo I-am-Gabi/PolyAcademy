@@ -28,16 +28,26 @@ public class YahooWeatherService {
         this.serviceCallBak = serviceCallBak;
     }
 
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public Exception getError() {
+        return error;
+    }
+
     public void refreshWeather(String l){
         this.location = l;
-        System.out.println("refresh weather");
         new AsyncTask<String, Void, String>() {
             @Override
             protected String doInBackground(String... params) {
-                System.out.println("do in backround");
                 String YQL = String.format("select * from weather.forecast where woeid in (select woeid from geo.places(1) where text=\"%s\")", params[0]);
                String endpoint = String.format("https://query.yahooapis.com/v1/public/yql?q=%s&format=json", Uri.encode(YQL));
-                System.out.println("refresh");
+
                 try {
                     URL url = new URL(endpoint);
 
@@ -74,10 +84,13 @@ public class YahooWeatherService {
 
                     JSONObject query = data.getJSONObject("query");
                     int count = query.optInt("count");
+
+
                     if (count == 0){
                         serviceCallBak.serviceFaillure(new Exception("erreur saisie de ville"));
                         return;
                     }
+
                     Channel channel = new Channel();
                     channel.populate(query.optJSONObject("results").optJSONObject("channel"));
                     serviceCallBak.serviceSucces(channel);
@@ -89,17 +102,5 @@ public class YahooWeatherService {
             //execute method will invoque the doInBackround : params = [location]
         }.execute(l);
 
-
-    }
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public Exception getError() {
-        return error;
     }
 }

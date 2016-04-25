@@ -4,13 +4,9 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import polytech.unice.fr.polynews.R;
 import polytech.unice.fr.polynews.database.Channel;
 import polytech.unice.fr.polynews.database.Item;
 import polytech.unice.fr.polynews.service.WeatherServiceCallBak;
@@ -19,21 +15,22 @@ import polytech.unice.fr.polynews.service.YahooWeatherService;
 /**
  * Created by cesar on 17/04/2016.
  */
-
 public class WeatherActivity extends AppCompatActivity implements WeatherServiceCallBak {
+    /*
+        private ImageView imageView;
+        private TextView temperatureTextView;
+        private TextView conditionTextView;
+        private TextView locationTextView;
+    */
     public static final String DATA = "data";
-
-
-    private ImageView weatherIconImageView;
-    private TextView temperatureTextView;
-    private TextView conditionTextView;
-    private TextView locationTextView;
-
-    private YahooWeatherService service;
+    private String temperatureTextView;
+    private String conditionTextView;
+    private String locationTextView;
     private ProgressDialog dialog;
 
-    @Override
-    public void OnCreate(@Nullable Bundle OnSavedView) {
+    private YahooWeatherService service;
+
+    protected void OnCreate(Bundle OnSavedView) {
         super.onCreate(OnSavedView);
         //setContentView(R.layout.weather);
 
@@ -41,13 +38,11 @@ public class WeatherActivity extends AppCompatActivity implements WeatherService
         //temperatureTextView = (TextView) findViewById(R.id.temp);
         //conditionTextView = (TextView) findViewById(R.id.condition);
         //locationTextView = (TextView) findViewById(R.id.location);
-        weatherIconImageView = (ImageView) findViewById(R.id.imageWeather);
-        temperatureTextView = (TextView) findViewById(R.id.temperature);
-        conditionTextView = (TextView) findViewById(R.id.condition);
-        locationTextView = (TextView) findViewById(R.id.location);
+
         service = new YahooWeatherService(this);
+        service.refreshWeather("austin, TX");
         dialog = new ProgressDialog(this);
-        dialog.setMessage("Loading...");
+        dialog.setMessage("loading...");
         dialog.show();
         Intent i = new Intent();
 
@@ -57,33 +52,27 @@ public class WeatherActivity extends AppCompatActivity implements WeatherService
         // Set the result with this data, and finish the activity
         setResult(RESULT_OK, i);
         finish();
-        service.refreshWeather("Austin, TX");
     }
 
     @Override
-    public void serviceSucces(Channel channel) {
+    public void serviceSucces(Channel c) {
         dialog.hide();
+        Item item = c.getItem();
 
-        Item item = channel.getItem();
-
-        int resourceId = getResources().getIdentifier("drawable/icon_" + item.getCondition().getCode(), null, getPackageName());
-
+        int ressource = getResources().getIdentifier("drawable/icon_" + item.getCondition().getCode(), null, getPackageName());
         @SuppressWarnings("deprecation")
-        Drawable weatherIconDrawble = getResources().getDrawable(resourceId);
+        Drawable iconDrawable = getResources().getDrawable(ressource);
 
-        weatherIconImageView.setImageDrawable(weatherIconDrawble);
-        System.out.println(item.getCondition().getTemperature());
-        System.out.println(item.getCondition().getDescription());
-
-        temperatureTextView.setText(item.getCondition().getTemperature() + "\u00B0" + channel.getUnit().getTemperature());
-        conditionTextView.setText(item.getCondition().getDescription());
-        locationTextView.setText(service.getLocation());
+        //imageView.setImageDrawable(iconDrawable);
+        temperatureTextView = item.getCondition().getTemperature()+ " " + c.getUnit().getTemperature();
+        conditionTextView = item.getCondition().getDescription();
+        locationTextView = service.getLocation();
+        System.out.println(temperatureTextView + " " + conditionTextView + " " + locationTextView);
     }
 
     @Override
-    public void serviceFaillure(Exception exception) {
+    public void serviceFaillure(Exception e) {
         dialog.hide();
-        Toast.makeText(this, exception.getMessage(), Toast.LENGTH_LONG).show();
-
+        Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
     }
 }
