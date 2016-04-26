@@ -11,7 +11,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import polytech.unice.fr.polynews.fragment.info.ContactFragment;
-import polytech.unice.fr.polynews.fragment.info.GalleryFragment;
 import polytech.unice.fr.polynews.fragment.info.PlanningFragment;
 import polytech.unice.fr.polynews.fragment.info.PolytechFragment;
 
