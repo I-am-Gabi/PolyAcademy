@@ -44,15 +44,10 @@ public class InfoAdapter extends FragmentStatePagerAdapter {
             PlanningFragment planningFragment = new PlanningFragment();
             return planningFragment;
         }
-        else if (position == 3)
+        else
         {
             ContactFragment contactFragment = new ContactFragment();
             return contactFragment;
-        }
-        else
-        {
-            GalleryFragment galleryFragment = new GalleryFragment();
-            return galleryFragment;
         }
 
 

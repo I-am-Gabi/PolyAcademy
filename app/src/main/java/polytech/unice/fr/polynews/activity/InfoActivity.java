@@ -20,8 +20,8 @@ public class InfoActivity extends AppCompatActivity{
     private ViewPager pager;
     private InfoAdapter adapter;
     private SlidingTabLayout tabs;
-    private static final CharSequence Titles[]={"Polytech","Planning", "Contact", "Gallery"};
-    private static final int nb_tabs = 4;
+    private static final CharSequence Titles[]={"Polytech","Planning", "Contact"};
+    private static final int nb_tabs = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

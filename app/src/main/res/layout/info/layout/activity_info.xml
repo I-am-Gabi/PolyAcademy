@@ -12,13 +12,12 @@
     tools:ignore="MergeRootFrame"
     tools:context=".activity.InfoActivity">
 
-
     <include
         android:id="@+id/tool_bar"
         layout="@layout/tool_bar"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        /> <!-- if i take this part out, i dont see really different...-->
+        />
 
     <polytech.unice.fr.polynews.fragment.info.tab.SlidingTabLayout
         android:id="@+id/tabs"
@@ -28,10 +27,9 @@
         android:background="@color/colorPrimary"/>
 
 
-
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_weight="1"
         />

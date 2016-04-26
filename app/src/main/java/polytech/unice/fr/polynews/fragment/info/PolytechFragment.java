@@ -17,8 +17,9 @@ public class PolytechFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.about_polytech, container, false);
-        WebView web = (WebView) v.findViewById(R.id.polytech_webView);
-        //web.loadUrl("https://polytechsi3.wordpress.com");
+        WebView web = (WebView) v.findViewById(R.id.webView_header);
+        web.getSettings().setJavaScriptEnabled(true);
+        web.loadUrl("file:///android_asset/gallery/with-jquery.html");
         return v;
     }
 }
