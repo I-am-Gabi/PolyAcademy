@@ -16,9 +16,12 @@ import polytech.unice.fr.polynews.R;
 public class GalleryFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.layout_galery, container, false);
-        //WebView web = (WebView) v.findViewById(R.id.gallery_webView);
-        //web.loadUrl("file:///android_asset/gallery/with-jquery.html");
+        View v = inflater.inflate(R.layout.layout_gallery, container, false);
+        WebView web = (WebView) v.findViewById(R.id.webView_gallery);
+        web.getSettings().setJavaScriptEnabled(true);
+        web.loadUrl("file:///android_asset/gallery/with-jquery.html");
+       // web.loadUrl("http://polytechsi3.wordpress.com");
+
         return v;
     }
 }
