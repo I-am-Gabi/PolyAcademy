@@ -15,6 +15,7 @@ import polytech.unice.fr.polynews.adapter.HomeAdapter;
 import polytech.unice.fr.polynews.database.Channel;
 import polytech.unice.fr.polynews.database.Item;
 import polytech.unice.fr.polynews.service.WeatherServiceCallBak;
+import polytech.unice.fr.polynews.service.YahooWeatherService;
 
 /**
  * @version 02/04/16.
@@ -23,6 +24,8 @@ public class HomeFragment extends Fragment implements WeatherServiceCallBak {
     public static final int WEATHER = 0;
     public static final int INFO = 1;
     public static final int NEWS = 2;
+
+    private YahooWeatherService service;
 
     RecyclerView recyclerView;
     private String[] mDataset = {"no service", "Know more about our University!",
@@ -39,6 +42,7 @@ public class HomeFragment extends Fragment implements WeatherServiceCallBak {
         HomeFragment fragment = new HomeFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
+
         return fragment;
     }
 
@@ -50,6 +54,9 @@ public class HomeFragment extends Fragment implements WeatherServiceCallBak {
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
+
+        //service = new YahooWeatherService(this);
+        //service.refreshWeather("Nice, FR");
 
         HomeAdapter adapter = new HomeAdapter(mDataset, mDatasetTypes);
         recyclerView.setAdapter(adapter);
