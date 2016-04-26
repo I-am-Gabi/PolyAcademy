@@ -32,24 +32,17 @@ public class InfoAdapter extends FragmentStatePagerAdapter {
     //This method return the fragment for the every position in the View Pager
     @Override
     public Fragment getItem(int position) {
-
-        if(position == 0) // if the position is 0 we are returning the First tab
-        {
+        if (position == 0) { // if the position is 0 we are returning the First tab
             PolytechFragment about_polytech = new PolytechFragment();
             return about_polytech;
-        }
-        else if (position == 1)
-        {
+        } else if (position == 1) {
             PlanningFragment planningFragment = new PlanningFragment();
             return planningFragment;
-        }
-        else
-        {
+
+        } else {
             ContactFragment contactFragment = new ContactFragment();
             return contactFragment;
         }
-
-
     }
 
     // This method return the titles for the Tabs in the Tab Strip
