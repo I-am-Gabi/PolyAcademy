@@ -20,6 +20,7 @@ public class InfoActivity extends AppCompatActivity{
     private ViewPager pager;
     private InfoAdapter adapter;
     private SlidingTabLayout tabs;
+    // private CharSequence Titles[]={getResources().getString(R.string.title_polytech),getResources().getString(R.string.title_planning), getResources().getString(R.string.title_contact)};
     private static final CharSequence Titles[]={"Polytech","Planning", "Contact"};
     private static final int nb_tabs = 3;
 
