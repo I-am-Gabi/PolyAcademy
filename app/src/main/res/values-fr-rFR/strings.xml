@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">PolyAcademy</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Menu -->
+    <string name="action_settings">Paramètres</string>
+    <string name="nav_home">Accueil</string>
+    <string name="nav_campus">Campus</string>
+    <string name="nav_news">Neuvelles</string>
+    <string name="nav_events">Événements </string>
+    <string name="nav_twitter">Partager!</string>
+    <string name="nav_info">SI</string>
+    <string name="text_header">PolyAcademy</string>
+
+    <!-- Home -->
+    <string name="welcome">Bienvenue à PolyAcademy!</string>
+    <string name="doNotShow">Ne le montre plus?</string>
+    <string name="next">+</string>
+    <string name="read_more">LISEZ-MOI</string>
+    <string name="title_weather">Weather | Nice, France</string>
+    <string name="title_information">Information - SI3</string>
+    <string name="title_news">News</string>
+
+    <!-- SI -->
+    <string name="title_polytech">Polytech</string>
+    <string name="title_planning">Planning</string>
+    <string name="title_contact">Contact</string>
+    <string name="title_gallery">Galerie</string>
+
+    <!-- Campus -->
+    <string name="title_templier">Templier</string>
+    <string name="title_learning">Learning Center</string>
+    <string name="title_cantine">Cantine</string>
+    <string name="templier">Polytech Nice-Sophia affiche clairement sa volonté d’ouverture sur le monde industriel. Dans un environnement favorable, notre école forme des ingénieurs ayant une base scientifique et technique solide, possédant une bonne culture d’entreprise, capables de communiquer et initiés aux fonctions d’encadrement. Nous offrons une formation en adéquation avec les besoins de l’entreprise. 95% de nos diplômés trouvent un emploi dans les 3 mois qui suivent la sortie de notre école. Nous sommes nés en 2005 du regroupement de plusieurs écoles d\'ingénieurs locales : de l\'Ecole Supérieure d\'Ingénieurs de Nice Sophia Antipolis (ESINSA), de l\'Ecole Supérieure en Sciences Informatiques (ESSI) et du Magistère de Pharmacologie de l\'Université.</string>
+    <string name="learning">Les rencontres Accès Libre ou Install Parties : ces soirées sont ouvertes à tous, que vous soyez curieux, passionné, débutant ou expert. Venez tester, découvrir et installer Linux sur votre ordinateur. Rendez-vous un mardi par mois de 17h30 à 19h30 • Mardi 9 février • Mardi 8 mars • Mardi 19 avril • Mardi 10 mai Présentation des jeux vidéos des étudiants du Master MAJE • Mercredi 9 mars à partir de 10h Les Cafés Techno LC/INRIA Alumni • Lundi 14 mars à 13h : dans le cadre de la «semaine du cerveau», rencontre avec Maureen Clerc, prix Pierre Faurre de l’Académie des Sciences Les petits-déjeuners d’entreprise • Jeudi 3 mars de 8h30 à 10h30 : « Comment développer ses réseaux dans la durée pour créer de la valeur ajoutée», en collaboration avec Agyca Les formations • Vendredi 26 février de 9h30 à 12h30 : UNS Pod et les vidéothèques • Jeudi 10 mars de 13h à 16h : Publiciser ses travaux de recherche • Mardi 22 mars de 14h à 17h : Wims, exercices d’évaluation en ligne • Lundi 25 avril de 14h à 17h : Screencast • Mercredi 25 mai de 14h à 17h : Outils de présentation pour une pédagogie interactive • Vendredi 27 mai de 14h à 17h : Boîtiers de vote électronique, sondage en classe, pédagogie inversée Les Ateliers du Libre • Jeudi 11 février de 14h à 17h : Concevoir ses affiches et ses posters scientifiques avec Inkscape</string>
+    <string name="cantine">Site de restoration du site sophia/antipolis; prix réduit ! restoration rapide réserver exclusivement aux étudiants</string>
+
+    <!-- News -->
+
+    <!-- Events -->
+    <string name="hello_events">Événements PolyAcademy</string>
+    <string name="hello_home">ÉvénementsPolyAcademy</string>
+
+    <!-- Twitter -->
+    <string name="twitter_share">Partagez-le!</string>
+    <string name="database_events_path">/data/data/polytech.unice.fr.polynews/databases/</string>
+    <string name="searching">recherche tweets</string>
+    <string name="user_twitter">polytechnice</string>
+    <string name="error_twitter">Error twitter</string>
+    <string name="title_activity_twitter_feed">TwitterFeedActivity</string>
+
+    <!-- Weather -->
+    <string name="weather_temperature">Température</string>
+    <string name="weather_location">Localisation</string>
+    <string name="weather_condition">Condition</string>
+
+    <!-- Database -->
+    <string name="error_database">Error sur la base de données</string>
+    <string name="error_database2">"N'existe base de données"</string>
+
+
+</resources>

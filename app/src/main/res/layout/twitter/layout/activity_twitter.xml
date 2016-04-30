@@ -1,0 +1,44 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#6a72ba"
+    tools:ignore="MergeRootFrame" >
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="@string/twitter_share"
+            android:textSize="20sp"
+            android:id="@+id/shareit"
+            android:textColor="#ffffff"
+            android:background="#20b2aa"
+            android:layout_marginTop="100dp"
+            android:typeface="serif"
+            android:scaleType="fitXY"
+            android:gravity="center"
+            android:layout_gravity="top|center"
+            />
+    </android.support.design.widget.AppBarLayout>
+
+
+
+    <ListView
+        android:id="@id/android:list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+    </ListView>
+
+</android.support.design.widget.CoordinatorLayout>

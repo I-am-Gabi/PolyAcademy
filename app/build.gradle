@@ -1,4 +1,22 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
 apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+android {
+    useLibrary 'org.apache.http.legacy'
+}
 
 android {
     compileSdkVersion 23
@@ -22,6 +40,20 @@ android {
         abortOnError false
     }
 
+    sourceSets {
+        main {
+            res.srcDirs = [
+                    'src/main/res/layout/campus',
+                    'src/main/res/layout/events',
+                    'src/main/res/layout/home',
+                    'src/main/res/layout/news',
+                    'src/main/res/layout/twitter',
+                    'src/main/res/layout/info',
+                    'src/main/res/layout',
+                    'src/main/res'
+            ]
+        }
+    }
 }
 
 dependencies {
@@ -30,4 +62,14 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.2.1'
     compile 'com.android.support:design:23.2.1'
     compile 'com.android.support:support-v4:23.2.1'
+
+    compile 'com.android.support:cardview-v7:23.0.0'
+    compile 'com.android.support:recyclerview-v7:23.0.0'
+
+    compile('com.twitter.sdk.android:twitter:1.13.0@aar') {
+        transitive = true;
+    }
+    compile 'org.twitter4j:twitter4j-core:4.0.2'
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    compile 'me.biubiubiu.justifytext:library:1.1'
 }
