@@ -11,9 +11,6 @@ import android.view.ViewGroup;
 
 import polytech.unice.fr.polynews.R;
 import polytech.unice.fr.polynews.adapter.HomeAdapter;
-import polytech.unice.fr.polynews.database.Channel;
-import polytech.unice.fr.polynews.database.Item;
-import polytech.unice.fr.polynews.service.WeatherServiceCallBak;
 import polytech.unice.fr.polynews.service.YahooWeatherService;
 
 /**
