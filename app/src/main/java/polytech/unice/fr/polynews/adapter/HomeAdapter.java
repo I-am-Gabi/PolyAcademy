@@ -8,12 +8,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.IOException;
 import java.sql.SQLException;
 
 import polytech.unice.fr.polynews.R;
+import polytech.unice.fr.polynews.activity.InfoActivity;
 import polytech.unice.fr.polynews.activity.ItemDetailActivity;
 import polytech.unice.fr.polynews.database.Channel;
 import polytech.unice.fr.polynews.database.Item;
@@ -145,10 +145,8 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> im
                 @Override
                 public void onClick(View v) {
                     Context context = v.getContext();
-                    //Intent intent = new Intent(context, ItemDetailActivity.class);
-                    //context.startActivity(intent);
-                    Toast toast = Toast.makeText(context, "INFORMATION", Toast.LENGTH_SHORT);
-                    toast.show();
+                    Intent activity = new Intent(context, InfoActivity.class);
+                    context.startActivity(activity);
                 }
             };
             holder.read_more.setOnClickListener(listener);
