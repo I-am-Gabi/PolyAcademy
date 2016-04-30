@@ -17,6 +17,8 @@ public class ContactFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v =inflater.inflate(R.layout.layout_contact,container,false);
+        WebView contact = (WebView) v.findViewById(R.id.webview_contact);
+        contact.loadUrl("https://informatique.polytechnice.fr/jahia/webdav/site/informatique/shared/EC5.html");
         return v;
     }
 }
