@@ -31,6 +31,8 @@ import android.view.ViewGroup;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import polytech.unice.fr.polynews.R;
+
 
 /**
  * To be used with ViewPager to provide a tab indicator component which give constant feedback as to
@@ -190,7 +192,6 @@ public class SlidingTabLayout extends HorizontalScrollView {
         for (int i = 0; i < adapter.getCount(); i++) {
             View tabView = null;
             TextView tabTitleView = null;
-
             if (mTabViewLayoutId != 0) {
                 // If there is a custom tab view layout id set, try and inflate it
                 tabView = LayoutInflater.from(getContext()).inflate(mTabViewLayoutId, mTabStrip,
@@ -223,6 +224,7 @@ public class SlidingTabLayout extends HorizontalScrollView {
             if (i == mViewPager.getCurrentItem()) {
                 tabView.setSelected(true);
             }
+            tabTitleView.setTextColor(getResources().getColor(R.color.tabsTitle));
         }
     }
 

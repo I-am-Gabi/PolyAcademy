@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 
+import java.util.Locale;
+
 import polytech.unice.fr.polynews.R;
 
 /**
@@ -17,8 +19,15 @@ public class PolytechFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.about_polytech, container, false);
-        WebView web = (WebView) v.findViewById(R.id.polytech_webView);
-        //web.loadUrl("https://polytechsi3.wordpress.com");
+        WebView header = (WebView) v.findViewById(R.id.webView_header);
+        header.getSettings().setJavaScriptEnabled(true);
+        header.loadUrl("file:///android_asset/gallery/with-jquery.html");
+
+        WebView about_si = (WebView) v.findViewById(R.id.about_si);
+        //if (Locale.getDefault().getLanguage() == "fr"){
+            about_si.loadUrl("file:///android_asset/polytech_si3/about_si-fr.html");
+       // }
+
         return v;
     }
 }

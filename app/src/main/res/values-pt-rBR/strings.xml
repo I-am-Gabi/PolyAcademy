@@ -22,6 +22,8 @@
     <string name="title_weather">Temperatura | Nice, France</string>
     <string name="title_information">Informação - SI3</string>
     <string name="title_news">Novidade</string>
+    <string name="home_info">Sabia mais sobre o SI3 e saiba a quem se dirigir</string>
+
 
     <!-- SI -->
     <string name="title_polytech">Polytech</string>
