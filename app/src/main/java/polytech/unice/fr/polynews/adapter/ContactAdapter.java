@@ -35,7 +35,7 @@ public class ContactAdapter extends ArrayAdapter<Contact> {
         }
 
         Contact p = getItem(position);
-        TextView nomPres = (TextView) convertView.findViewById(R.id.nom_pres);
+        TextView nomPres = (TextView) convertView.findViewById(R.id.nom);
         TextView numPres = (TextView) convertView.findViewById(R.id.num_pres_assos);
         TextView nomAssos = (TextView) convertView.findViewById(R.id.Nom_assos);
         TextView mailPres = (TextView) convertView.findViewById(R.id.mail_pres_assos);
