@@ -49,6 +49,7 @@ android {
                     'src/main/res/layout/news',
                     'src/main/res/layout/twitter',
                     'src/main/res/layout/info',
+                    'src/main/res/layout/calendar',
                     'src/main/res/layout',
                     'src/main/res'
             ]
