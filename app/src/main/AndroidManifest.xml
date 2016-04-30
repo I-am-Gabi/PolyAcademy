@@ -36,7 +36,6 @@
         <activity android:name=".activity.ItemDetailActivity"/>
         <activity android:name=".activity.InfoActivity"/>
         <activity android:name=".activity.WeatherActivity"/>
-        <activity android:name=".activity.CalendarActivity"/>
 
         <meta-data
             android:name="io.fabric.ApiKey"
