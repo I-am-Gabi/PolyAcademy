@@ -15,7 +15,7 @@ import polytech.unice.fr.polynews.R;
 public class ContactFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v =inflater.inflate(R.layout.layout_contact,container,false);
+        View v =inflater.inflate(R.layout.layout_contact_assos,container,false);
         return v;
     }
 }

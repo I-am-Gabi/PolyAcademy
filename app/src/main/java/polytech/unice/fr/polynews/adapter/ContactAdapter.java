@@ -31,7 +31,7 @@ public class ContactAdapter extends ArrayAdapter<Contact> {
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         if (convertView == null){
-            convertView = inflater.inflate(R.layout.layout_contact, null);
+            convertView = inflater.inflate(R.layout.layout_contact_assos, null);
         }
 
         Contact p = getItem(position);
