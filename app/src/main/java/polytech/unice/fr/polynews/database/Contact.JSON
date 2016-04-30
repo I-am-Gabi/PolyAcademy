@@ -1,0 +1,41 @@
+{
+  "type":"contact",
+  "identite": [
+    {
+      "nom": "Nouveau",
+      "prenom":"CreateDoc",
+      "mail":"truc@gmail.com",
+      "numeros":"0610015566",
+    },
+    {
+      "nom": "Peyrat",
+      "prenom":"Claudine",
+      "mail":"truc@gmail.com",
+      "numeros":"0610015566"
+    },
+    {
+      "nom": "Gallan",
+      "prenom":"Claude",
+      "mail":"truc@gmail.com",
+      "numeros":"0610015566"
+    },
+    {
+      "nom": "Dery",
+      "prenom":"Anne-mary",
+      "mail":"truc@gmail.com",
+      "numeros":"0610015566"
+    },
+    {
+      "nom": "Colle",
+      "prenom":"César",
+      "mail":"truc@gmail.com",
+      "numeros":"0610015566"
+    },
+    {
+      "nom": "Nouveau",
+      "prenom":"CreateDoc",
+      "mail":"truc@gmail.com",
+      "numeros":"0610015566"
+    }
+  ]
+}
