@@ -11,7 +11,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import polytech.unice.fr.polynews.fragment.info.ContactFragment;
-import polytech.unice.fr.polynews.fragment.info.GalleryFragment;
 import polytech.unice.fr.polynews.fragment.info.PlanningFragment;
 import polytech.unice.fr.polynews.fragment.info.PolytechFragment;
 
@@ -39,12 +38,10 @@ public class InfoAdapter extends FragmentStatePagerAdapter {
         } else if (position == 1) {
             PlanningFragment planningFragment = new PlanningFragment();
             return planningFragment;
-        } else if (position == 2) {
+
+        } else {
             ContactFragment contactFragment = new ContactFragment();
             return contactFragment;
-        } else {
-            GalleryFragment galleryFragment = new GalleryFragment();
-            return galleryFragment;
         }
     }
 

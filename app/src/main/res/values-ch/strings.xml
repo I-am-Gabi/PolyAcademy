@@ -22,6 +22,8 @@
     <string name="title_weather">Weather | Nice, France</string>
     <string name="title_information">Information - SI3</string>
     <string name="title_news">News</string>
+    <string name="home_info">Know more about SI3 and who talk to</string>
+
 
     <!-- SI -->
     <string name="title_polytech">Polytech</string>

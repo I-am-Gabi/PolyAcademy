@@ -1,0 +1,32 @@
+/*
+ -- CSS TO CV
+*/
+
+.date{
+	text-decoration: underline;
+}
+
+body {
+    font-family: "Times New Roman";
+    font-size: 12px;
+    padding: 20px;
+    text-align: justify;
+    /*font-weight: bold;*/
+
+}
+
+ul {
+	margin-right: 0px; /* All 4 margins are 12 px; */
+	padding: 0px 0px 3px 6px; /*Top, right, bottom, left*/
+	
+}
+
+li {
+	border-width: medium;
+	padding: 0px;
+}
+
+.goals{ #footer => plus de info
+    margin-bottom: 10px;
+    margin-left: 2em;
+}

@@ -26,10 +26,11 @@ public class HomeFragment extends Fragment implements WeatherServiceCallBak {
     public static final int NEWS = 2;
 
     private YahooWeatherService service;
-
     RecyclerView recyclerView;
-    private String[] mDataset = {"no service", "Know more about our University!",
+    private String[] mDataset = {"no service",
+            "Know more about SI3 and who talk to" /*getContext.getResources().getString(R.string.home_info)*/,
             "Flash missing, vanishes in crisis"};
+
     private int mDatasetTypes[] = {WEATHER, INFO, NEWS}; //view types
 
     /**
