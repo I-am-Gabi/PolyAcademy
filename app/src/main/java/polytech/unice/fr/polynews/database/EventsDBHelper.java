@@ -34,9 +34,9 @@ public class EventsDBHelper extends SQLiteOpenHelper {
     // Database Version
     private static final int DATABASE_VERSION = 1;
     // Database Name
-    private static final String DATABASE_NAME = "polynews_database";
+    private static final String DATABASE_NAME = "events.db";
     // News table name
-    private static final String TABLE_EVENTS = "news";
+    private static final String TABLE_EVENTS = "events";
     // Database path
     private static final String DATABASE_PATH = "/data/data/polytech.unice.fr.polynews/databases/";
 
@@ -139,11 +139,12 @@ public class EventsDBHelper extends SQLiteOpenHelper {
         if (cursor.moveToFirst()) {
             do {
                 Event event = new Event();
-                event.setId(Integer.parseInt(cursor.getString(7)));
-                event.setTitle(cursor.getString(0));
-                event.setDatetime(cursor.getString(3).split(" ")[0]);
-                event.setDescription(cursor.getString(1));
-                event.setLocal("Polytech");
+                event.setId(Integer.parseInt(cursor.getString(0)));
+                event.setTitle(cursor.getString(1));
+                event.setDescription(cursor.getString(2));
+                event.setLocal(cursor.getString(3));
+                event.setOrganization(cursor.getString(4));
+                event.setDatetime(cursor.getString(5).split(" ")[0]);
                 // Adding new to list
                 newsList.add(event);
             } while (cursor.moveToNext());

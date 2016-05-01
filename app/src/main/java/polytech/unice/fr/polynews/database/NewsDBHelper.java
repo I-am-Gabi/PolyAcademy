@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import polytech.unice.fr.polynews.model.Event;
+import polytech.unice.fr.polynews.model.New;
 
 /**
  * @see <a href="http://stackoverflow.com/questions/24634116/caused-by-android-database-sqlite-sqliteexception-no-such-table-code-1-andr>
@@ -35,7 +36,7 @@ public class NewsDBHelper extends SQLiteOpenHelper {
     // Database Name
     private static final String DATABASE_NAME = "polynews_database";
     // News table name
-    private static final String TABLE_EVENTS = "news";
+    private static final String TABLE_NEWS = "news";
     // Database path
     private static final String DATABASE_PATH = "/data/data/polytech.unice.fr.polynews/databases/";
 
@@ -130,19 +131,19 @@ public class NewsDBHelper extends SQLiteOpenHelper {
      * last entry in the result set.
      * @return all records in the table news
      */
-    public List<Event> selectRecords() {
-        Cursor cursor = myDataBase.rawQuery("SELECT * FROM " + TABLE_EVENTS, null);
-        List<Event> newsList = new ArrayList<>();
+    public List<New> selectRecords() {
+        Cursor cursor = myDataBase.rawQuery("SELECT * FROM " + TABLE_NEWS, null);
+        List<New> newsList = new ArrayList<>();
 
         // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
             do {
-                Event event = new Event();
+                New event = new New();
                 event.setId(Integer.parseInt(cursor.getString(7)));
                 event.setTitle(cursor.getString(0));
+                event.setContent(cursor.getString(1));
                 event.setDatetime(cursor.getString(3).split(" ")[0]);
-                event.setDescription(cursor.getString(1));
-                event.setLocal("Polytech");
+                event.setMedia_path(cursor.getString(6));
                 // Adding new to list
                 newsList.add(event);
             } while (cursor.moveToNext());
@@ -154,7 +155,7 @@ public class NewsDBHelper extends SQLiteOpenHelper {
     }
 
     public Event selectTopRecord() {
-        Cursor cursor = myDataBase.rawQuery("SELECT * FROM " + TABLE_EVENTS + " where _id = (SELECT MAX(_id) FROM " + TABLE_EVENTS + ");", null);
+        Cursor cursor = myDataBase.rawQuery("SELECT * FROM " + TABLE_NEWS + " where _id = (SELECT MAX(_id) FROM " + TABLE_NEWS + ");", null);
         Event last_news = new Event();
 
         // looping through all rows and adding to list
