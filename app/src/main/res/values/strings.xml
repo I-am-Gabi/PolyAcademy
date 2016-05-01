@@ -12,6 +12,7 @@
     <string name="nav_events">Events</string>
     <string name="nav_twitter">Share!</string>
     <string name="nav_info">SI</string>
+    <string name="nav_calendar">Calendar</string>
     <string name="text_header">PolyAcademy</string>
 
     <!-- Home -->

@@ -17,6 +17,7 @@ import com.twitter.sdk.android.core.TwitterAuthConfig;
 
 import io.fabric.sdk.android.Fabric;
 import polytech.unice.fr.polynews.activity.TwitterFeedActivity;
+import polytech.unice.fr.polynews.fragment.calendar.CalendarFragment;
 import polytech.unice.fr.polynews.fragment.campus.CampusHomeFragment;
 import polytech.unice.fr.polynews.fragment.events.EventsFragment;
 import polytech.unice.fr.polynews.fragment.home.HomeFragment;
@@ -186,6 +187,12 @@ public class MainActivity extends AppCompatActivity
                 getFragmentManager()
                         .beginTransaction()
                         .replace(R.id.content, NewsFragment.newInstance())
+                        .commit();
+                break;
+            case R.id.nav_calendar:
+                getFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.content, CalendarFragment.newInstance())
                         .commit();
                 break;
             default:
