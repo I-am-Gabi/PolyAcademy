@@ -1,11 +1,10 @@
 {
-  "type":"contact",
   "identite": [
     {
       "nom": "Nouveau",
       "prenom":"CreateDoc",
       "mail":"truc@gmail.com",
-      "numeros":"0610015566",
+      "numeros":"0610015566"
     },
     {
       "nom": "Peyrat",

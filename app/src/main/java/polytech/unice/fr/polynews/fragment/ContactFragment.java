@@ -32,7 +32,7 @@ public class ContactFragment extends Fragment {
         String jsondata = "";
 
         try {
-            jsondata = jsonToStringFromFile("Contact.JSON", getActivity());
+            jsondata = jsonToStringFromFile("Contact.json", getActivity());
         } catch (IOException e) {
             e.printStackTrace();
         }
