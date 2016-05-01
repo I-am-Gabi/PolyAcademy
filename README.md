@@ -9,27 +9,34 @@ L'application contiendra l'organisation générale de l'école, où les nouveaux
 
 Une application qui répond à l'intégration scolaire et de l'information parmi les étudiants.
 
-## Exigences ##
----------------
-- Les activités à développer
-    [1] Afficher un article “classique” de news avec image ou vidéo en en‐tête (obligatoire pour chaque groupe)
-    [2] Revoir la Page "d’accueil" de l’application: présentation de l’école, galerie d’images
-    [3] Faire une vitrine formations/parcours
-    [4] Présenter des évènements (soirées BDE, soirées jeux/laser quest, Agile PlayGround, coding
+## Travail realisé ##
+----------------------
+ * [1] Afficher un article “classique” de news avec image ou vidéo en en‐tête (obligatoire pour chaque groupe)
+ * [2] Revoir la Page "d’accueil" de l’application: présentation de l’école, galerie d’images
+ * [3] Faire une vitrine formations/parcours
+ * [4] Présenter des évènements (soirées BDE, soirées jeux/laser quest, Agile PlayGround, coding
       dojos, Afterworks, etc.)
-    [5] Faire une présentation du campus: Learning centre, Templiers, Lucioles
-
-- Extensions possibles
-    [6] Ajouter un widget météo sur la page d’accueil
-    [7] Intégrer un flux Twitter (learning centre, bde, etc)
-    [8] Proposer une navigation incluant une communication entre les activités
-    [9] lier les informations de contact aux applications du téléphone (tel, sms, ...)
-     ** extension extra: partager l'application par message, twitter, facebook, etc.
+ * [5] Faire une présentation du campus: Learning centre, Templiers, Lucioles
+ * [6] Ajouter un widget météo sur la page d’accueil
+ * [7] Intégrer un flux Twitter (learning centre, bde, etc)
+ * [8] Proposer une navigation incluant une communication entre les activités
+ * [9] Lier les informations de contact aux applications du téléphone (tel, sms, ...)
+ * [10] Partager l'application par message, twitter, facebook, etc.
+ * [11] Calendar avec les activités à faire en SI3 et évènements.
+ * [12] Application disponible en anglais, français , portugais et chinois .
+ * [13] Insérez des icônes personnalisées dans le menu
 
 Nous avons aussi essayé gérer l'orientation paysage de l'appareil dans les différentes vues.
 Pour les News, nous utilisons la base de données déjà fournies dans le cours.
 Pour les Events, nous avons créé une base de données exemple (pas de données réelles).
 Notre page Home montre le widget météo, fournit un lien vers la page "d'accueil"
+Pour le galerie d'images nous avons décidé de l'utiliser comme une "tête". Et cette vues, dans l'orientation paysage, est grand. [2.1]
+
+## Travail a realisé ##
+-----------------------
+* [2.1] Adapter le 'header' dans l'orientatioon paysage.
+* [11.1] Change le taille du calendar.
+* [12.1] Modifiez les webviews quand il détecte la langue de l'appareil.
 
 ## Répartition du travail ##
 ----------------------------
@@ -40,9 +47,12 @@ Notre page Home montre le widget météo, fournit un lien vers la page "d'accuei
     [5] responsable: César Colle
     [6] responsable: César Colle
     [7] responsable: Gabriela Cavalcante
-    [8] responsable: Gabriela Cavalcante
+    [8] responsable: Gabriela Cavalcante, Raquel Oliveira
     [9] responsable: César Colle
-     ** responsable: Gabriela Cavalcante
+    [10] responsable: Gabriela Cavalcante
+    [11] responsable: Raquel Oliveira
+    [12] responsable: Raquel Oliveira (anglais, français et portugais ), Huang Xiaohan (chinois)
+    [13] responsable: Raquel Oliveira
 
 
 ## Mainteneurs ##
@@ -50,9 +60,9 @@ Notre page Home montre le widget météo, fournit un lien vers la page "d'accuei
 
 Mainteneurs actuels
 
-* [César COLLE] (mailto:cesar.colle@gmail.com)
-* [Raquel LOPES DE OLIVEIRA] (mailto:oliveira.raquel.lopes@gmail.com)
-* [Gabriela CAVALCANTE DA SILVA] (mailto:gabicavalcantesilva@gmail.com)
+* [César COLLE](mailto:cesar.colle@gmail.com)
+* [Raquel LOPES DE OLIVEIRA](mailto:oliveira.raquel.lopes@gmail.com)
+* [Gabriela CAVALCANTE DA SILVA](mailto:gabicavalcantesilva@gmail.com)
 * [Huang XIAOHAN](mailto:xiaohan.huang@etu.unice.fr)
 
 Ce projet a été parrainé par
