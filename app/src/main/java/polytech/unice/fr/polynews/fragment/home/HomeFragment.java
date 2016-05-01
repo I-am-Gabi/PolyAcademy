@@ -52,9 +52,6 @@ public class HomeFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
-        //service = new YahooWeatherService(this);
-        //service.refreshWeather("Nice, FR");
-
         HomeAdapter adapter = new HomeAdapter(mDataset, mDatasetTypes);
         recyclerView.setAdapter(adapter);
 

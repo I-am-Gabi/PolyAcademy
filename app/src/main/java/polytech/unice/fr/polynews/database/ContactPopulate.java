@@ -20,7 +20,7 @@ public class ContactPopulate  {
     public ContactPopulate (String data) {
 
         this.jsonObject = new JsonParser().parse(data).getAsJsonObject();
-        contacts = new ArrayList<Contact>();
+        contacts = new ArrayList<>();
         JsonArray companyList = (JsonArray) this.jsonObject.get("identite");
 
 

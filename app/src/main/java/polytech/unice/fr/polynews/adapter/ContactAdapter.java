@@ -17,8 +17,6 @@ import polytech.unice.fr.polynews.model.Contact;
  */
 public class ContactAdapter extends ArrayAdapter<Contact> {
 
-
-
     public ContactAdapter(Context context, int resource, List<Contact> array) {
         super(context, resource, array);
 
