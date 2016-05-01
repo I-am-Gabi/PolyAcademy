@@ -39,7 +39,7 @@ public class ContactFragmentAssos extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         try {
-            jsondata = jsonToStringFromFile("Contact.json", getActivity());
+            jsondata = jsonToStringFromFile("Contact.JSON", getActivity());
         } catch (IOException e) {
             e.printStackTrace();
         }
