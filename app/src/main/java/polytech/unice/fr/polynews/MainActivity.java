@@ -16,13 +16,12 @@ import com.twitter.sdk.android.Twitter;
 import com.twitter.sdk.android.core.TwitterAuthConfig;
 
 import io.fabric.sdk.android.Fabric;
-import polytech.unice.fr.polynews.activity.InfoActivity;
 import polytech.unice.fr.polynews.activity.TwitterFeedActivity;
 import polytech.unice.fr.polynews.fragment.calendar.CalendarFragment;
 import polytech.unice.fr.polynews.fragment.campus.CampusHomeFragment;
-import polytech.unice.fr.polynews.fragment.contact.ContactFragmentAssos;
 import polytech.unice.fr.polynews.fragment.events.EventsFragment;
 import polytech.unice.fr.polynews.fragment.home.HomeFragment;
+import polytech.unice.fr.polynews.activity.InfoActivity;
 import polytech.unice.fr.polynews.fragment.news.NewsFragment;
 
 
@@ -196,11 +195,6 @@ public class MainActivity extends AppCompatActivity
                         .replace(R.id.content, CalendarFragment.newInstance())
                         .commit();
                 break;
-            case R.id.nav_contact:
-                getFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.content, ContactFragmentAssos.newInstance())
-                        .commit();
             default:
                 break;
         }

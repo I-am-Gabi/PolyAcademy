@@ -14,12 +14,13 @@ Une application qui répond à l'intégration scolaire et de l'information parmi
  * [1] Afficher un article “classique” de news avec image ou vidéo en en‐tête (obligatoire pour chaque groupe)
  * [2] Revoir la Page "d’accueil" de l’application: présentation de l’école, galerie d’images
  * [3] Faire une vitrine formations/parcours
- * [4] Présenter des évènements (soirées BDE, soirées jeux/laser quest, Agile PlayGround, coding dojos, Afterworks, etc.)
+ * [4] Présenter des évènements (soirées BDE, soirées jeux/laser quest, Agile PlayGround, coding
+      dojos, Afterworks, etc.)
  * [5] Faire une présentation du campus: Learning centre, Templiers, Lucioles
  * [6] Ajouter un widget météo sur la page d’accueil
  * [7] Intégrer un flux Twitter (learning centre, bde, etc)
  * [8] Proposer une navigation incluant une communication entre les activités
- * [9] Faire une vitrine des associations (BDE, BDJ, Association des anciens,...)
+ * [9] Lier les informations de contact aux applications du téléphone (tel, sms, ...)
  * [10] Partager l'application par message, twitter, facebook, etc.
  * [11] Calendar avec les activités à faire en SI3 et évènements.
  * [12] Application disponible en anglais, français , portugais et chinois .
@@ -46,15 +47,14 @@ Pour le galerie d'images nous avons décidé de l'utiliser comme une "tête". Et
     [3] responsable: Raquel Oliveira
     [4] responsable: Gabriela Cavalcante
     [5] responsable: César Colle
-    [6] responsable: César Colle  | collaborateurs: Gabriela Cavalcante
+    [6] responsable: César Colle
     [7] responsable: Gabriela Cavalcante
     [8] responsable: Gabriela Cavalcante, Raquel Oliveira
-    [9] responsable: César Colle | collaborateurs: Gabriela Cavalcante
+    [9] responsable: César Colle
     [10] responsable: Gabriela Cavalcante
     [11] responsable: Raquel Oliveira
     [12] responsable: Raquel Oliveira (anglais, français et portugais ), Huang Xiaohan (chinois)
     [13] responsable: Raquel Oliveira
-    [14] responsable: Raquel Oliveira
 
 
 ## Mainteneurs ##

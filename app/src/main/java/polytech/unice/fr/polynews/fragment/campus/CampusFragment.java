@@ -26,6 +26,7 @@ public class CampusFragment extends Fragment{
 
     public static CampusFragment newInstance(){
         CampusFragment fragment = new CampusFragment();
+
         return fragment;
     }
 }

@@ -38,6 +38,7 @@ public class InfoAdapter extends FragmentStatePagerAdapter {
         } else if (position == 1) {
             PlanningFragment planningFragment = new PlanningFragment();
             return planningFragment;
+
         } else {
             ContactFragment contactFragment = new ContactFragment();
             return contactFragment;
