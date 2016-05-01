@@ -7,9 +7,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import polytech.unice.fr.polynews.R;
+import polytech.unice.fr.polynews.activity.DownloadPictures;
 
 /**
  * A fragment representing a single Item detail screen.
@@ -22,6 +24,7 @@ public class ItemDetailFragment extends Fragment {
      */
     public static final String ARG_ITEM_TITLE = "item_title";
     public static final String ARG_ITEM_CONTENT = "item_content";
+    public static final String ARG_ITEM_MEDIA_PATH = "item_media_path";
 
 
     /**
@@ -54,7 +57,9 @@ public class ItemDetailFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.item_detail, container, false);
 
-        //((TextView) rootView.findViewById(R.id.item_detail)).setTextAlignment(TextAlignment.JUSTIFIED);
+        DownloadPictures task = new DownloadPictures((ImageView) rootView.findViewById(R.id.image_new_detail), container.getContext());
+        task.execute(getArguments().getString(ARG_ITEM_MEDIA_PATH));
+
         ((TextView) rootView.findViewById(R.id.item_detail)).setText(getArguments().getString(ARG_ITEM_CONTENT));
         return rootView;
     }

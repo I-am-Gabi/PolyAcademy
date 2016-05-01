@@ -47,6 +47,8 @@ public class ItemDetailActivity extends AppCompatActivity {
                     getIntent().getStringExtra(ItemDetailFragment.ARG_ITEM_TITLE));
             arguments.putString(ItemDetailFragment.ARG_ITEM_CONTENT,
                     getIntent().getStringExtra(ItemDetailFragment.ARG_ITEM_CONTENT));
+            arguments.putString(ItemDetailFragment.ARG_ITEM_MEDIA_PATH,
+                    getIntent().getStringExtra(ItemDetailFragment.ARG_ITEM_MEDIA_PATH));
             ItemDetailFragment fragment = new ItemDetailFragment();
             fragment.setArguments(arguments);
             getSupportFragmentManager().beginTransaction().

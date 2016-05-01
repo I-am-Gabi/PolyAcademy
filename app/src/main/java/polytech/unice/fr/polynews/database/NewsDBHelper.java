@@ -132,7 +132,7 @@ public class NewsDBHelper extends SQLiteOpenHelper {
      * @return all records in the table news
      */
     public List<New> selectRecords() {
-        Cursor cursor = myDataBase.rawQuery("SELECT * FROM " + TABLE_NEWS, null);
+        Cursor cursor = myDataBase.rawQuery("SELECT * FROM " + TABLE_NEWS + " ORDER BY _id DESC ", null);
         List<New> newsList = new ArrayList<>();
 
         // looping through all rows and adding to list
