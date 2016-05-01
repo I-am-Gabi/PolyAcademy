@@ -9,6 +9,10 @@ L'application contiendra l'organisation générale de l'école, où les nouveaux
 
 Une application qui répond à l'intégration scolaire et de l'information parmi les étudiants.
 
+## Github projet ##
+----------------------
+GITHUB: https://github.com/I-am-Gabi/PolyAcademy
+
 ## Travail realisé ##
 ----------------------
  * [1] Afficher un article “classique” de news avec image ou vidéo en en‐tête (obligatoire pour chaque groupe)
