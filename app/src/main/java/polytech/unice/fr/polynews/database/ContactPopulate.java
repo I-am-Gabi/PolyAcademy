@@ -1,8 +1,9 @@
 package polytech.unice.fr.polynews.database;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,19 +13,46 @@ import polytech.unice.fr.polynews.model.Contact;
 /**
  * Created by cesar on 26/04/2016.
  */
-public class ContactPopulate implements JSONPopulate {
+public class ContactPopulate  {
     List<Contact> contacts;
-    @Override
-    public void populate(JSONObject data) throws JSONException {
+    private JsonObject jsonObject;
+
+    public ContactPopulate (String data) {
+
+        this.jsonObject = new JsonParser().parse(data).getAsJsonObject();
         contacts = new ArrayList<Contact>();
-        if (data.optString("type").equals("contact")){
-            throw new JSONException("not the good file");
-        }
-        JSONArray arr = data.getJSONArray("identite");
-        for (int i = 0; i < arr.length(); i++){
-            contacts.add(new Contact(arr.getJSONObject(i)));
-        }
+        JsonArray companyList = (JsonArray) this.jsonObject.get("identite");
 
 
+        for (int i = 0; i < companyList.size(); i++) {
+            JsonObject tmp = companyList.get(i).getAsJsonObject();
+            JsonElement nom = tmp.get("nom");
+            JsonElement mail = tmp.get("mail");
+            JsonElement numeros = tmp.get("numeros");
+            JsonElement prenom = tmp.get("prenom");
+
+            String name = "";
+            String first = "";
+            String mailed = "";
+            String number = "";
+
+            if (nom != null) {
+                name = nom.getAsString();
+            }
+            if (mail != null) {
+                mailed = mail.getAsString();
+            }
+            if (numeros != null) {
+                number = numeros.getAsString();
+            }
+            if (prenom != null) {
+                first = prenom.getAsString();
+            }
+            contacts.add(new Contact(name, first, mailed, number));
+        }
+    }
+
+    public List<Contact> getContacts() {
+        return contacts;
     }
 }
