@@ -14,23 +14,24 @@ import java.sql.SQLException;
 import java.util.List;
 
 import polytech.unice.fr.polynews.R;
+import polytech.unice.fr.polynews.activity.DownloadPictures;
 import polytech.unice.fr.polynews.activity.ItemDetailActivity;
-import polytech.unice.fr.polynews.database.EventsDBHelper;
+import polytech.unice.fr.polynews.database.NewsDBHelper;
 import polytech.unice.fr.polynews.fragment.news.ItemDetailFragment;
-import polytech.unice.fr.polynews.model.Event;
+import polytech.unice.fr.polynews.model.New;
 
 /**
  * @version 19/04/16.
  */
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
-    private List<Event> dataSet;
+    private List<New> dataSet;
     private Context context;
 
     // Provide a reference to the views for each data item
     public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         // each data item is just a string in this case
         public TextView title;
-        public TextView description;
+        public TextView content;
         public TextView date_time;
         public ImageView image_new;
         public Context context;
@@ -42,7 +43,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
             mView = itemView;
             this.context = context;
             this.title = (TextView) itemView.findViewById(R.id.title_new);
-            this.description = (TextView) itemView.findViewById(R.id.description_new);
+            this.content = (TextView) itemView.findViewById(R.id.description_new);
             this.image_new = (ImageView) itemView.findViewById(R.id.image_new);
             //this.date_time = (TextView) itemView.findViewById(R.id.date_time_new);
             //itemView.setOnClickListener(this);
@@ -82,8 +83,11 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         // - replace the contents of the view with that element
 
         holder.title.setText(dataSet.get(position).getTitle());
-        holder.description.setText(dataSet.get(position).getDescription());
-        //holder.date_time.setText(dataSet.get(position).getDateTime());
+        holder.content.setText(dataSet.get(position).getContent());
+
+        DownloadPictures task = new DownloadPictures(holder.image_new, this.context);
+        task.execute(dataSet.get(position).getMedia_path());
+        //holder.date_time.setText("10/10/2015"); //(dataSet.get(position).getDateTime());
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
@@ -91,12 +95,12 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
                 Context context = v.getContext();
                 Intent intent = new Intent(context, ItemDetailActivity.class);
                 intent.putExtra(ItemDetailFragment.ARG_ITEM_TITLE, dataSet.get(position).getTitle());
-                intent.putExtra(ItemDetailFragment.ARG_ITEM_CONTENT, dataSet.get(position).getDescription());
+                intent.putExtra(ItemDetailFragment.ARG_ITEM_CONTENT, dataSet.get(position).getContent());
                 context.startActivity(intent);
             }
         };
 
-        holder.description.setOnClickListener(listener);
+        holder.content.setOnClickListener(listener);
         holder.title.setOnClickListener(listener);
         holder.image_new.setOnClickListener(listener);
     }
@@ -107,8 +111,8 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         return dataSet.size();
     }
 
-    private List<Event> setDataSet() {
-        EventsDBHelper dbHelper = new EventsDBHelper(context);
+    private List<New> setDataSet() {
+        NewsDBHelper dbHelper = new NewsDBHelper(context);
         try {
             dbHelper.createDataBase();
             dbHelper.openDataBase();

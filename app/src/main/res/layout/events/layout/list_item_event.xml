@@ -85,6 +85,20 @@
                 />
 
             <TextView
+                android:id="@+id/org"
+                style="style/TextAppearance.Small"
+                android:paddingLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Small"
+                android:layout_toEndOf="@+id/local"
+                android:layout_below="@+id/title_event"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:maxLength="100"
+                />
+
+            <TextView
                 android:id="@+id/description_event"
                 style="style/TextAppearance.Small"
                 android:paddingLeft="10dp"

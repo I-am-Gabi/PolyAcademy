@@ -10,11 +10,22 @@ public class Event {
     private String datetime;
     private String local;
 
+    public String getOrganization() {
+        return organization;
+    }
+
+    public void setOrganization(String organization) {
+        this.organization = organization;
+    }
+
+    private String organization;
+
     public Event() {
         this.title = "title";
-        this.description = "description";
+        this.description = "content";
         this.datetime = "10/10/10 00:00:00";
         this.local = "Nice";
+        this.organization = "Polytech";
     }
 
     public int getId() {

@@ -35,12 +35,14 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder
         public TextView description;
         public TextView date_time;
         public TextView local;
+        public TextView org;
         public ViewHolder(View itemView) {
             super(itemView);
             this.title = (TextView) itemView.findViewById(R.id.title_event);
             this.description = (TextView) itemView.findViewById(R.id.description_event);
             this.date_time = (TextView) itemView.findViewById(R.id.date_time);
             this.local = (TextView) itemView.findViewById(R.id.local);
+            this.org = (TextView) itemView.findViewById(R.id.org);
         }
     }
 
@@ -67,6 +69,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder
         holder.description.setText(dataSet.get(position).getDescription());
         holder.date_time.setText(dataSet.get(position).getDateTime());
         holder.local.setText(dataSet.get(position).getLocal());
+        holder.org.setText(dataSet.get(position).getOrganization());
     }
 
     @Override
