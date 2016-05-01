@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">PolyAcademy</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Menu -->
+    <string name="action_settings">Settings</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_campus">Campus</string>
+    <string name="nav_news">News</string>
+    <string name="nav_events">Events</string>
+    <string name="nav_twitter">Share!</string>
+    <string name="nav_info">SI</string>
+    <string name="nav_calendar">Calendar</string>
+    <string name="text_header">PolyAcademy</string>
+
+    <!-- Home -->
+    <string name="welcome">Welcome to PolyAcademy!</string>
+    <string name="doNotShow">Do not show it again?</string>
+    <string name="next">+</string>
+    <string name="read_more">READ MORE</string>
+    <string name="title_weather">Weather | Nice, France</string>
+    <string name="title_information">Information - SI</string>
+    <string name="title_news">News</string>
+    <string name="home_info">Know more about SI</string>
+    <string name="title_polytech2">About Polytech</string>
+    <string name="about_polytech">Polytech Nice-Sophia est lécole dingénieur de lUniversité Nice - Sophia Antipolis. Elle fait partie du regroupement des écoles du réseau national Polytech décole dingénieur polytechnique (Ecole Polytechnique Universitaire).</string>
+
+    <!-- SI -->
+    <string name="title_polytech">Polytech</string>
+    <string name="title_planning">Planning</string>
+    <string name="title_contact">Contact</string>
+
+    <!-- Campus -->
+    <string name="title_templier">Templier</string>
+    <string name="title_learning">Learning Center</string>
+    <string name="title_cantine">Cantine</string>
+    <string name="templier">Polytech Nice Sophia shows, clearly, it is commitment to openness to the industrial world. In a favorable environment, our school trains engineers with strong technical and scientific basis, with good corporate culture, able to communicate and start a new job or function. We offer training in line with business needs. 95% of our graduates finds employment within 3 months after the release of our school. We were born in 2005 from the consolidation of several engineers places.</string>
+    <string name="learning">Meetings Open Access or Install Parties: These evenings are open to all, whether you are curious, passionate, beginner or expert. Come test, discover and install Linux on your computer. Appointments one Tuesday a month from 17:30 to 19:30 • Tuesday, February 9 • Tuesday, March 8 • Tuesday, April 19 • Tuesday, May 10 Presentation of video games for students of the Master MAJE • Wednesday, March 9th from 10am Coffees Techno LC / INRIA Alumni • Monday, March 14th at 13h: part of the "brain week" meeting with Maureen Clerc, Pierre Faurre prize of the Academy of Sciences of business breakfasts • Thursday, March 3 from 8:30 to 10:30 " Comment développer ses réseaux dans la durée pour créer de la valeur ajoutée ", in collaboration with Agyca training • Friday, February 26 from 9:30 to 12:30: UNS Pod and video libraries • Thursday, March 10 from 13h to 16h: Publicize its research • Tuesday, March 22 from 14h to 17h: WIMS, online assessment exercises • Monday, April 25th from 14h to 17h: Screencast • Wednesday, May 25 from 14h to 17h: presentation Tools for interactive pedagogy • Friday, May 27 from 14h to 17h : electronic voting Boxes, classroom survey, pedagogy inversée Free Workshops • Thursday, February 11 from 14h to 17h: to design its posters and scientific poster with Inkscape</string>
+    <string name="cantine">Site restoration site sophia / antipolis; reduced price ! fast food reserve exclusively to students</string>
+
+    <!-- News -->
+
+    <!-- Events -->
+    <string name="hello_events">Events PolyAcademy</string>
+    <string name="hello_home">Events PolyAcademy</string>
+
+    <!-- Twitter -->
+    <string name="twitter_share">Share it!</string>
+    <string name="database_events_path">/data/data/polytech.unice.fr.polynews/databases/</string>
+    <string name="searching">searching tweets</string>
+    <string name="user_twitter">polytechnice</string>
+    <string name="error_twitter">Error twitter</string>
+    <string name="title_activity_twitter_feed">TwitterFeedActivity</string>
+
+    <!-- Weather -->
+    <string name="weather_temperature">Temperature</string>
+    <string name="weather_location">Location</string>
+    <string name="weather_condition">Condition</string>
+
+    <!-- Database -->
+    <string name="error_database">Error copying database</string>
+    <string name="error_database2">"Database doesn't exist"</string>
+
+
+</resources>
