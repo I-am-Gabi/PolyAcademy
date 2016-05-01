@@ -122,7 +122,11 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> im
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
 
-        if (viewHolder.getItemViewType() == WEATHER) {
+        if (viewHolder.getItemViewType() == POLYTECH) {
+            PolytechHolder  holder_polytech= (PolytechHolder) viewHolder;
+            holder_polytech.temp.setText(mDataSet[position]);
+        }
+        else if (viewHolder.getItemViewType() == WEATHER) {
             holder_weather = (WeatherViewHolder) viewHolder;
             holder_weather.temp.setText(mDataSet[position]);
         }
