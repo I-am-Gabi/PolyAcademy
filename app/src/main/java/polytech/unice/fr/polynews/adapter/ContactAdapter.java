@@ -13,19 +13,17 @@ import polytech.unice.fr.polynews.R;
 import polytech.unice.fr.polynews.model.Contact;
 
 /**
- * Created by cesar on 26/04/2016.
+ * @version 26/04/2016.
  */
 public class ContactAdapter extends ArrayAdapter<Contact> {
 
-    public ContactAdapter(Context context, int resource, List<Contact> array) {
-        super(context, resource, array);
+    public ContactAdapter(Context context, List<Contact> array) {
+        super(context, -1, array);
 
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-
-
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         if (convertView == null){

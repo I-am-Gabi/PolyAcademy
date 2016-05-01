@@ -37,7 +37,7 @@ Notre page Home montre le widget météo, fournit un lien vers la page "d'accuei
     [3] responsable: Raquel Oliveira
     [4] responsable: Gabriela Cavalcante
     [5] responsable: César Colle
-    [6] responsable: César Colle
+    [6] responsable: César Colle  | collaborateurs: Gabriela Cavalcante
     [7] responsable: Gabriela Cavalcante
     [8] responsable: Gabriela Cavalcante
      ** responsable: Gabriela Cavalcante

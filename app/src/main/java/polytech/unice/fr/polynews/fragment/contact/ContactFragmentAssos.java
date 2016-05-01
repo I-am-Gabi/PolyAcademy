@@ -26,27 +26,8 @@ import polytech.unice.fr.polynews.model.Contact;
  */
 public class ContactFragmentAssos extends Fragment {
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    String jsondata = "";;
 
-        String jsondata = "";
-
-        try {
-            jsondata = jsonToStringFromFile("Contact.json", getActivity());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        final ArrayList<Contact> array = (ArrayList<Contact>) new ContactPopulate(jsondata).getContacts();
-        ContactAdapter adapter = new ContactAdapter(container.getContext(), R.id.assos_list_view, array);
-        final View rootView = inflater.inflate(R.layout.layout_contact_assos, container, false);
-
-        final ListView listView = (ListView) rootView.findViewById(R.id.assos_list_view);
-        listView.setAdapter(adapter);
-
-        return rootView;
-
-    }
 
     public static ContactFragmentAssos newInstance() {
         ContactFragmentAssos fragment = new ContactFragmentAssos();
@@ -54,9 +35,32 @@ public class ContactFragmentAssos extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-    /***
- *
- */
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        try {
+            jsondata = jsonToStringFromFile("Contact.json", getActivity());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        final View rootView = inflater.inflate(R.layout.contact_list_view, container, false);
+
+        return rootView;
+
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        final ArrayList<Contact> array = (ArrayList<Contact>) new ContactPopulate(jsondata).getContacts();
+        ContactAdapter adapter = new ContactAdapter(getActivity(), array);
+
+        ListView listView = (ListView) getView().findViewById(android.R.id.list);
+        listView.setAdapter(adapter);
+    }
+
     public static String jsonToStringFromFile(String fileName, Context context) throws IOException {
         AssetManager manage = context.getAssets();
         InputStream file = manage.open(fileName);
