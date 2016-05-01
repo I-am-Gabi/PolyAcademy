@@ -32,7 +32,7 @@
             android:title="@string/nav_twitter" />
         <item
             android:id="@+id/nav_contact"
-            android:icon="@drawable/ic_contact"
+            android:icon="@drawable/ic_twitter"
             android:title="@string/nav_contact" />
     </group>
 </menu>
