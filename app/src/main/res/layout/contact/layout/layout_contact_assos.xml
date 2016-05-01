@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Contaaact"
+        android:text="nom_assos"
         android:id="@+id/Nom_assos"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
+        android:text="nom_pres"
         android:id="@+id/nom_pres"
         android:layout_below="@+id/Nom_assos"
         android:layout_alignParentStart="true" />

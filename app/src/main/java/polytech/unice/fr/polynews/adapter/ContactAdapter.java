@@ -37,14 +37,14 @@ public class ContactAdapter extends ArrayAdapter<Contact> {
         Contact p = getItem(position);
         TextView nomPres = (TextView) convertView.findViewById(R.id.nom);
         TextView numPres = (TextView) convertView.findViewById(R.id.num_pres_assos);
-        TextView nomAssos = (TextView) convertView.findViewById(R.id.Nom_assos);
+        TextView nameAssos = (TextView) convertView.findViewById(R.id.Nom_assos);
         TextView mailPres = (TextView) convertView.findViewById(R.id.mail_assos);
 
         if (nomPres != null){
             nomPres.setText(p.getPrenom());
         }
-        if (nomAssos != null){
-            nomAssos.setText(p.getNom());
+        if (nameAssos != null){
+            nameAssos.setText(p.getNom());
         }
         if (numPres != null){
             numPres.setText(p.getNumeros());
