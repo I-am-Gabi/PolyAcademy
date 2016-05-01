@@ -14,7 +14,7 @@
     <string name="nav_info">SI</string>
     <string name="nav_calendar">Calendário</string>
     <string name="text_header">PolyAcademy</string>
-    <string name="nav_contact_assoc">Contatos</string>
+    <string name="nav_contact_assoc">Contatos - Associações</string>
 
     <!-- Home -->
     <string name="welcome">Bem-vindo a PolyAcademy!</string>
