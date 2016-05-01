@@ -24,7 +24,7 @@
             android:title="@string/nav_events" />
         <item
             android:id="@+id/nav_twitter"
-            android:icon="@drawable/ic_twitter"
+            android:icon="@drawable/ic_share"
             android:title="@string/nav_twitter" />
         <item
             android:id="@+id/nav_calendar"
