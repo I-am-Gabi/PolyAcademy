@@ -24,14 +24,19 @@ Une application qui répond à l'intégration scolaire et de l'information parmi
  * [10] Partager l'application par message, twitter, facebook, etc.
  * [11] Calendar avec les activités à faire en SI3 et évènements.
  * [12] Application disponible en anglais, français , portugais et chinois .
+ * [13] Insérez des icônes personnalisées dans le menu
 
 Nous avons aussi essayé gérer l'orientation paysage de l'appareil dans les différentes vues.
 Pour les News, nous utilisons la base de données déjà fournies dans le cours.
 Pour les Events, nous avons créé une base de données exemple (pas de données réelles).
 Notre page Home montre le widget météo, fournit un lien vers la page "d'accueil"
+Pour le galerie d'images nous avons décidé de l'utiliser comme une "tête". Et cette vues, dans l'orientation paysage, est grand. [2.1]
 
 ## Travail a realisé ##
 -----------------------
+* [2.1] Adapter le 'header' dans l'orientatioon paysage.
+* [11.1] Change le taille du calendar.
+* [12.1] Modifiez les webviews quand il détecte la langue de l'appareil.
 
 ## Répartition du travail ##
 ----------------------------
@@ -47,6 +52,7 @@ Notre page Home montre le widget météo, fournit un lien vers la page "d'accuei
     [10] responsable: Gabriela Cavalcante
     [11] responsable: Raquel Oliveira
     [12] responsable: Raquel Oliveira (anglais, français et portugais ), Huang Xiaohan (chinois)
+    [13] responsable: Raquel Oliveira
 
 
 ## Mainteneurs ##
@@ -54,9 +60,9 @@ Notre page Home montre le widget météo, fournit un lien vers la page "d'accuei
 
 Mainteneurs actuels
 
-* [César COLLE] (mailto:cesar.colle@gmail.com)
-* [Raquel LOPES DE OLIVEIRA] (mailto:oliveira.raquel.lopes@gmail.com)
-* [Gabriela CAVALCANTE DA SILVA] (mailto:gabicavalcantesilva@gmail.com)
+* [César COLLE](mailto:cesar.colle@gmail.com)
+* [Raquel LOPES DE OLIVEIRA](mailto:oliveira.raquel.lopes@gmail.com)
+* [Gabriela CAVALCANTE DA SILVA](mailto:gabicavalcantesilva@gmail.com)
 * [Huang XIAOHAN](mailto:xiaohan.huang@etu.unice.fr)
 
 Ce projet a été parrainé par
