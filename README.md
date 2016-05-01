@@ -25,6 +25,7 @@ Une application qui répond à l'intégration scolaire et de l'information parmi
  * [11] Calendar avec les activités à faire en SI3 et évènements.
  * [12] Application disponible en anglais, français , portugais et chinois .
  * [13] Insérez des icônes personnalisées dans le menu
+ * [14] Insérez list de contacts à Polytech
 
 Nous avons aussi essayé gérer l'orientation paysage de l'appareil dans les différentes vues.
 Pour les News, nous utilisons la base de données déjà fournies dans le cours.
@@ -32,11 +33,12 @@ Pour les Events, nous avons créé une base de données exemple (pas de données
 Notre page Home montre le widget météo, fournit un lien vers la page "d'accueil"
 Pour le galerie d'images nous avons décidé de l'utiliser comme une "tête". Et cette vues, dans l'orientation paysage, est grand. [2.1]
 
-## Travail a realisé ##
+## Travail à realisé ##
 -----------------------
 * [2.1] Adapter le 'header' dans l'orientatioon paysage.
 * [11.1] Change le taille du calendar.
 * [12.1] Modifiez les webviews quand il détecte la langue de l'appareil.
+* [14.1] Entrez les informations sur leur "fonction" et remplir la base de contact.
 
 ## Répartition du travail ##
 ----------------------------
