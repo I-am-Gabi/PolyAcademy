@@ -23,7 +23,6 @@ Une application qui répond à l'intégration scolaire et de l'information parmi
     [6] Ajouter un widget météo sur la page d’accueil
     [7] Intégrer un flux Twitter (learning centre, bde, etc)
     [8] Proposer une navigation incluant une communication entre les activités
-    [9] lier les informations de contact aux applications du téléphone (tel, sms, ...)
      ** extension extra: partager l'application par message, twitter, facebook, etc.
 
 Nous avons aussi essayé gérer l'orientation paysage de l'appareil dans les différentes vues.
@@ -41,7 +40,6 @@ Notre page Home montre le widget météo, fournit un lien vers la page "d'accuei
     [6] responsable: César Colle
     [7] responsable: Gabriela Cavalcante
     [8] responsable: Gabriela Cavalcante
-    [9] responsable: César Colle
      ** responsable: Gabriela Cavalcante
 
 
