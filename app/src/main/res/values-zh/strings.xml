@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">PolyAcademy</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Menu -->
+    <string name="action_settings">设置</string>
+    <string name="nav_home">主页</string>
+    <string name="nav_campus">校园</string>
+    <string name="nav_news">新闻</string>
+    <string name="nav_events">事件</string>
+    <string name="nav_twitter">分享!</string>
+    <string name="nav_info">计算机科学</string>
+    <string name="nav_calendar">日历</string>
+    <string name="text_header">PolyAcademy</string>
+
+    <!-- Home -->
+    <string name="welcome">欢迎来到PolyAcademy!</string>
+    <string name="doNotShow">不再显示?</string>
+    <string name="next">+</string>
+    <string name="read_more">更多</string>
+    <string name="title_weather">天气 | 尼斯, 法国</string>
+    <string name="title_information">信息 - 计算机科学</string>
+    <string name="title_news">新闻</string>
+    <string name="home_info">了解更多“计算机科学”</string>
+    <string name="title_polytech2">关于 Polytech</string>
+    <string name="about_polytech">尼斯索菲亚综合理工是尼斯大学下属的一所工程师学院，是GEIPI-Polytech的成员之一.</string>
+
+    <!-- SI -->
+    <string name="title_polytech">Polytech</string>
+    <string name="title_planning">计划</string>
+    <string name="title_contact">联系</string>
+
+    <!-- Campus -->
+    <string name="title_templier">Templier</string>
+    <string name="title_learning">图书馆</string>
+    <string name="title_cantine">食堂</string>
+    <string name="templier">尼斯索菲亚综合理工承诺对工业领域开放。我校拥有优良的学习环境，学校教师均具有精湛的专业技术以及扎实的学术基础，了解企业文化，并具有良好的沟通交流能力。我们提供符合企业需求的培养和教育，95 %的毕业生在三个月内成功就业。</string>
+    <string name="learning">开放日：以下时间对所有人开放，无论好奇者，爱好者，初学者或是专家。快来试一试，在你的电脑上安装Linux系统。一个月内每周二晚17:30至19：30，2月9日，3月8日，4月19日，5月10日：Presentation of video games for students of the Master MAJE。3月9日上午十点：Coffees Techno LC / INRIA Alumni。3月14日下午1点：part of the "brain week" meeting with Maureen Clerc, Pierre Faurre prize of the Academy of Sciences of business breakfasts。3月3日上午8:30至10:30：Comment développer ses réseaux dans la durée pour créer de la valeur ajoutée ", in collaboration with Agyca training。2月26日上午9：30至12:30：UNS Pod and video libraries。3月10日下午13:00至16:00：Publicize its research。3月22日下午14:00至17:00：WIMS, online assessment exercises。4月25日下午14：00至17：00： Screencast。5月25日下午14:00至17:00：presentation Tools for interactive pedagogy。 5月27日下午14:00至17:00：electronic voting Boxes, classroom survey, pedagogy inversée Free Workshops。 2月11日下午14:00至17:00：to design its posters and scientific poster with Inkscape  </string>
+    <string name="cantine">Site de restoration du site sophia/antipolis; 减价 ! 快餐预定，专为学生</string>
+
+    <!-- News -->
+
+    <!-- Events -->
+    <string name="hello_events">PolyAcademy 事件</string>
+    <string name="hello_home">PolyAcademy 事件</string>
+
+    <!-- Twitter -->
+    <string name="twitter_share">分享!</string>
+    <string name="database_events_path">/data/data/polytech.unice.fr.polynews/databases/</string>
+    <string name="searching">搜索推特</string>
+    <string name="user_twitter">polytechnice</string>
+    <string name="error_twitter">Error twitter</string>
+    <string name="title_activity_twitter_feed">TwitterFeedActivity</string>
+
+    <!-- Weather -->
+    <string name="weather_temperature">温度</string>
+    <string name="weather_location">地区</string>
+    <string name="weather_condition">天气条件</string>
+
+    <!-- Database -->
+    <string name="error_database">Error copying database</string>
+    <string name="error_database2">"Database doesn't exist"</string>
+
+
+</resources>

@@ -25,6 +25,8 @@
     <string name="title_information">Information - SI</string>
     <string name="title_news">News</string>
     <string name="home_info">Know more about SI</string>
+    <string name="title_polytech2">About Polytech</string>
+    <string name="about_polytech">Polytech Nice-Sophia is the engineering school at the University of Nice - Sophia Antipolis. It is part of the national school consolidation of polytechnic network engineer (Ecole Polytechnique Universitaire).</string>
 
     <!-- SI -->
     <string name="title_polytech">Polytech</string>

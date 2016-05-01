@@ -18,10 +18,8 @@ public class ContactFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v =inflater.inflate(R.layout.layout_contact,container,false);
         WebView contact = (WebView) v.findViewById(R.id.webview_contact);
-        contact.loadUrl("https://informatique.polytechnice.fr/jahia/webdav/site/informatique/shared/EC5.html");
-
-        // View v =inflater.inflate(R.layout.layout_contact_assos,container,false);
-
+        //contact.loadUrl("https://informatique.polytechnice.fr/jahia/webdav/site/informatique/shared/EC5.html");
+        contact.loadUrl("file:///android_asset/contacts/contact_list.html");
         return v;
     }
 }
