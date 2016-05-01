@@ -6,12 +6,13 @@
 
     <!-- Menu -->
     <string name="action_settings">Configurações</string>
-    <string name="nav_home">Home</string>
+    <string name="nav_home">Início</string>
     <string name="nav_campus">Campus</string>
     <string name="nav_news">Novidades</string>
     <string name="nav_events">Eventos</string>
     <string name="nav_twitter">Compartilhe!</string>
     <string name="nav_info">SI</string>
+    <string name="nav_calendar">Calendário</string>
     <string name="text_header">PolyAcademy</string>
 
     <!-- Home -->
@@ -20,16 +21,15 @@
     <string name="next">+</string>
     <string name="read_more">LEIA MAIS</string>
     <string name="title_weather">Temperatura | Nice, France</string>
-    <string name="title_information">Informação - SI3</string>
+    <string name="title_information">Informação - SI</string>
     <string name="title_news">Novidade</string>
-    <string name="home_info">Sabia mais sobre o SI3 e saiba a quem se dirigir</string>
+    <string name="home_info">Sabia mais sobre o curso SI</string>
 
 
     <!-- SI -->
     <string name="title_polytech">Polytech</string>
     <string name="title_planning">Plano de Curso</string>
     <string name="title_contact">Contato</string>
-    <string name="title_gallery">Galeria</string>
 
     <!-- Campus -->
     <string name="title_templier">Templier</string>
