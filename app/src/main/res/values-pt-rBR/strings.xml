@@ -24,7 +24,7 @@
     <string name="title_information">Informação - SI</string>
     <string name="title_news">Novidade</string>
     <string name="home_info">Sabia mais sobre o curso SI</string>
-    <string name="about_polytech">Polytech Nice-Sophia est lécole dingénieur de lUniversité Nice - Sophia Antipolis. Elle fait partie du regroupement des écoles du réseau national Polytech décole dingénieur polytechnique (Ecole Polytechnique Universitaire).</string>
+    <string name="about_polytech">Polytech Nice-Sophia é uma escola de engenheiros da Universidade Nice - Sophia Antipolis. Ela faz parte do reagrupamento das escolas de rede nacional Ecole Polytechnique Universitaire.</string>
     <string name="title_polytech2">Sobre a Polytech</string>
 
     <!-- SI -->
@@ -60,8 +60,8 @@
     <string name="weather_condition">Condição</string>
 
     <!-- Database -->
-    <string name="error_database">Error copying database</string>
-    <string name="error_database2">"Database doesn't exist"</string>
+    <string name="error_database">Erro ao copiar database</string>
+    <string name="error_database2">"Database não existe"</string>
 
 
 </resources>
