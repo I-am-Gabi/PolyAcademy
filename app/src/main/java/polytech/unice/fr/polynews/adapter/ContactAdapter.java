@@ -31,14 +31,14 @@ public class ContactAdapter extends ArrayAdapter<Contact> {
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         if (convertView == null){
-            convertView = inflater.inflate(R.layout.layout_contact, null);
+            convertView = inflater.inflate(R.layout.layout_contact_assos, null);
         }
 
         Contact p = getItem(position);
         TextView nomPres = (TextView) convertView.findViewById(R.id.nom);
         TextView numPres = (TextView) convertView.findViewById(R.id.num_pres_assos);
         TextView nomAssos = (TextView) convertView.findViewById(R.id.Nom_assos);
-        TextView mailPres = (TextView) convertView.findViewById(R.id.mail_pres_assos);
+        TextView mailPres = (TextView) convertView.findViewById(R.id.mail_assos);
 
         if (nomPres != null){
             nomPres.setText(p.getPrenom());
@@ -54,6 +54,6 @@ public class ContactAdapter extends ArrayAdapter<Contact> {
         }
 
 
-    return convertView;
+        return convertView;
     }
 }
