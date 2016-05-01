@@ -34,13 +34,12 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> im
     private String[] mDataSet;
     private int[] mDataSetTypes;
 
-    public static final int POLYTECH = 0;
-    public static final int WEATHER = 1;
-    public static final int INFO = 2;
-    public static final int NEWS = 3;
+    public static final int WEATHER = 0;
+    public static final int INFO = 1;
+    public static final int NEWS = 2;
+    public static final int POLYTECH = 3;
 
     WeatherViewHolder holder_weather;
-
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public ViewHolder(View v) {
@@ -102,7 +101,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> im
         View v;
         if (viewType == POLYTECH){
             v = LayoutInflater.from(viewGroup.getContext())
-                    .inflate(R.layout.about_polytech, viewGroup, false);
+                    .inflate(R.layout.polytech, viewGroup, false);
             return new PolytechHolder(v);
         } else if (viewType == WEATHER) {
             v = LayoutInflater.from(viewGroup.getContext())
@@ -151,7 +150,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> im
             };
             holder.read_more.setOnClickListener(listener);
         }
-        else {
+        else if (viewHolder.getItemViewType() == INFO) {
             InfoViewHolder holder = (InfoViewHolder) viewHolder;
             holder.info.setText(mDataSet[position]);
 
@@ -164,6 +163,9 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> im
                 }
             };
             holder.read_more.setOnClickListener(listener);
+        } else {
+            PolytechHolder polytechHolder = (PolytechHolder) viewHolder;
+            polytechHolder.temp.setText(R.string.about_polytech);
         }
     }
 
