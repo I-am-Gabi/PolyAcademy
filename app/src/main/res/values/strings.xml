@@ -24,6 +24,8 @@
     <string name="title_information">Information - SI</string>
     <string name="title_news">News</string>
     <string name="home_info">Know more about SI</string>
+    <string name="title_polytech2">About Polytech</string>
+    <string name="about_polytech">Polytech Nice-Sophia est lécole dingénieur de lUniversité Nice - Sophia Antipolis. Elle fait partie du regroupement des écoles du réseau national Polytech décole dingénieur polytechnique (Ecole Polytechnique Universitaire).</string>
 
     <!-- SI -->
     <string name="title_polytech">Polytech</string>

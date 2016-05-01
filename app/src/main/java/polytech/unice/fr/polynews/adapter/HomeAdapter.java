@@ -34,16 +34,25 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> im
     private String[] mDataSet;
     private int[] mDataSetTypes;
 
-    public static final int WEATHER = 0;
-    public static final int INFO = 1;
-    public static final int NEWS = 2;
+    public static final int WEATHER = 1;
+    public static final int INFO = 2;
+    public static final int NEWS = 3;
+    public static final int POLYTECH = 0;
 
     WeatherViewHolder holder_weather;
-
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public ViewHolder(View v) {
             super(v);
+        }
+    }
+
+    public class PolytechHolder extends ViewHolder {
+        TextView temp;
+
+        public PolytechHolder(View v) {
+            super(v);
+            this.temp = (TextView) v.findViewById(R.id.polytech);
         }
     }
 
@@ -90,7 +99,11 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> im
         service.refreshWeather("Nice, FR");
 
         View v;
-        if (viewType == WEATHER) {
+        if (viewType == POLYTECH){
+            v = LayoutInflater.from(viewGroup.getContext())
+                    .inflate(R.layout.polytech, viewGroup, false);
+            return new PolytechHolder(v);
+        } else if (viewType == WEATHER) {
             v = LayoutInflater.from(viewGroup.getContext())
                     .inflate(R.layout.weather, viewGroup, false);
             return new WeatherViewHolder(v);
@@ -108,7 +121,11 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> im
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
 
-        if (viewHolder.getItemViewType() == WEATHER) {
+        if (viewHolder.getItemViewType() == POLYTECH) {
+            PolytechHolder polytechHolder = (PolytechHolder) viewHolder;
+            polytechHolder.temp.setText(R.string.about_polytech);
+        }
+        else if (viewHolder.getItemViewType() == WEATHER) {
             holder_weather = (WeatherViewHolder) viewHolder;
             holder_weather.temp.setText(mDataSet[position]);
         }

@@ -19,6 +19,7 @@ public class PlanningFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.planning, container, false);
         WebView web = (WebView) v.findViewById(R.id.planning_webView);
+        web.getSettings().setJavaScriptEnabled(true);
         web.loadUrl("file:///android_asset/planning/index.html");
         return v;
     }

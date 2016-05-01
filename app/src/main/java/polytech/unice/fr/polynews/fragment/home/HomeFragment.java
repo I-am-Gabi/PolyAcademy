@@ -11,23 +11,22 @@ import android.view.ViewGroup;
 
 import polytech.unice.fr.polynews.R;
 import polytech.unice.fr.polynews.adapter.HomeAdapter;
-import polytech.unice.fr.polynews.service.YahooWeatherService;
 
 /**
  * @version 02/04/16.
  */
 public class HomeFragment extends Fragment {
-    public static final int WEATHER = 0;
-    public static final int INFO = 1;
-    public static final int NEWS = 2;
+    public static final int WEATHER = 1;
+    public static final int INFO = 2;
+    public static final int NEWS = 3;
+    public static final int POLYTECH = 0;
 
-    private YahooWeatherService service;
     RecyclerView recyclerView;
-    private String[] mDataset = {"no service",
+    private String[] mDataset = {"Polytech", "no service",
             "Know more about SI!!!" /*getContext.getResources().getString(R.string.home_info)*/,
             "Flash missing, vanishes in crisis"};
 
-    private int mDatasetTypes[] = {WEATHER, INFO, NEWS}; //view types
+    private int mDatasetTypes[] = {POLYTECH, WEATHER, INFO, NEWS}; //view types
 
     /**
      * Returns a new instance of this polytech.unice.fr.polynews.fragment for the given section
@@ -51,9 +50,6 @@ public class HomeFragment extends Fragment {
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-
-        //service = new YahooWeatherService(this);
-        //service.refreshWeather("Nice, FR");
 
         HomeAdapter adapter = new HomeAdapter(mDataset, mDatasetTypes);
         recyclerView.setAdapter(adapter);
